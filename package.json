@@ -1,0 +1,24 @@
+{
+  "name": "Hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss build src/style.css -o public/css/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pp3times/Hackathon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pp3times/Hackathon/issues"
+  },
+  "homepage": "https://github.com/pp3times/Hackathon#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.7"
+  }
+}
