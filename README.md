@@ -1,1 +1,3 @@
 # Hackathon
+
+```npm install```
