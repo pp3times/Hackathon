@@ -58,18 +58,13 @@
     </div>
 
     <main>
+
     </main>
 
     <script>
         function pageTarget(val) {
             if (val == 1) {
-                $.get("components/main.asp", function (data, status) {
-                    if (data) {
-                        $("main").html(data);
-                    } else {
-                        alert("รายการขัดข้อง" + "\nสถานะ: " + status);
-                    }
-                });
+                $("main").load("components/main.txt");
             }
         }
     </script>
