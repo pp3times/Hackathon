@@ -1,0 +1,220 @@
+<style>
+  :root {
+    --ui-background: #d4d0c8;
+    --shadow-white: #fff;
+    --shadow-light: #808080;
+    --shadow-dark: #404040;
+    --title-gradient-left: #0a246a;
+    --title-gradient-right: #a5c8ee;
+    --title-gradient-left-inactive: var(--shadow-light);
+    --title-gradient-right-inactive: #c0c0c0;
+    --title-color-inactive: var(--ui-background);
+  }
+
+  .slate {
+    --ui-background: #9db9c8;
+    --shadow-white: #cedce3;
+    --shadow-light: #558097;
+    --shadow-dark: #000000;
+    --title-gradient-left: #558097;
+    --title-gradient-right: #558097;
+    --title-gradient-left-inactive: #808080;
+    --title-gradient-right-inactive: #808080;
+    --title-color-inactive: #c0c0c0;
+  }
+
+  body {
+    background-color: #3a6ea5;
+    font-family: Tahoma, system-ui;
+    font-size: 8pt;
+  }
+
+  .window {
+    background-color: var(--ui-background);
+    border: 1px solid var(--shadow-dark);
+    border-top-color: var(--ui-background);
+    border-left-color: var(--ui-background);
+    box-shadow: -1px -1px 0 0 var(--shadow-light) inset,
+      1px 1px 0 0 var(--shadow-white) inset;
+    padding: 0;
+    width: 400px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  header {
+    color: var(--title-color-inactive);
+    margin: 2px;
+    padding: 2px;
+    background: linear-gradient(
+      to right,
+      var(--title-gradient-left-inactive),
+      var(--title-gradient-right-inactive)
+    );
+    display: flex;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .active header {
+    background: linear-gradient(
+      to right,
+      var(--title-gradient-left),
+      var(--title-gradient-right)
+    );
+    color: #fff;
+  }
+
+  header h1 {
+    padding: 0.1em 0.25em;
+    margin: 0;
+    font-size: 9pt;
+    flex-grow: 1;
+    font-weight: 600;
+  }
+
+  header .tools button {
+    width: 16px;
+    height: 14px;
+    padding: 0;
+  }
+
+  main {
+    padding: 0.5em;
+  }
+
+  button {
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    border: 1px solid var(--shadow-dark);
+    border-top-color: var(--shadow-white);
+    border-left-color: var(--shadow-white);
+    background-color: var(--ui-background);
+    padding: 0.3em 1.5em 0.5em;
+    box-shadow: -1px -1px 0 0 var(--shadow-light) inset;
+  }
+
+  button:focus {
+    outline: none;
+    border: 1px solid #000;
+    box-shadow: -1px -1px 0 0 var(--shadow-dark) inset,
+      1px 1px 0 0 var(--shadow-white) inset,
+      -2px -2px 0 0 var(--shadow-light) inset;
+  }
+
+  button:focus::after,
+  button:not(:disabled):active::after {
+    content: "";
+    border: 1px dotted #000;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0.2em 0.3em 0.3em 0.2em;
+  }
+
+  .tools button:active {
+    border: 0;
+    box-shadow: -1px -1px 0 0 #fff inset, 1px 1px 0 0 var(--shadow-dark) inset,
+      -2px -2px 0 0 var(--ui-background) inset,
+      2px 2px 0 0 var(--shadow-light) inset;
+  }
+
+  button:not(:disabled):active {
+    border: 1px solid #000;
+    box-shadow: 0 0 0 1px var(--shadow-light) inset;
+    color: #000;
+    /*padding: calc(0.2em + 1px) calc(1.5em - 1px) calc(0.4em - 1px) calc(1.5em + 1px);*/
+  }
+
+  button:disabled {
+    color: var(--shadow-light);
+    text-shadow: 1px 1px 0 var(--shadow-white);
+  }
+
+  button .shortcut {
+    text-decoration: underline;
+  }
+
+  fieldset {
+    border: 0;
+    box-shadow: -1px -1px 0 0 var(--shadow-white) inset,
+      -2px -2px 0 0 var(--shadow-light) inset,
+      1px 1px 0 0 var(--shadow-light) inset,
+      2px 2px 0 0 var(--shadow-white) inset;
+  }
+
+  legend {
+    background-color: var(--ui-background);
+  }
+
+  .dialog-actions {
+    text-align: right;
+    margin: 0.5em 0 0.2em;
+  }
+</style>
+<div class="window active">
+  <header>
+    <h1>System Properties</h1>
+    <div class="tools">
+      <button type="button">×</button>
+    </div>
+  </header>
+  <main>
+    <fieldset>
+      <legend>Advanced settings</legend>
+      <button type="button">
+        <span class="shortcut">F</span>ile System...
+      </button>
+      <button type="button"><span class="shortcut">G</span>raphics...</button>
+      <button type="button">
+        <span class="shortcut">V</span>irtual Memory...
+      </button>
+    </fieldset>
+
+    <div class="dialog-actions">
+      <button type="button">OK</button>
+      <button type="button">Cancel</button>
+      <button type="button" disabled>
+        <span class="shortcut">A</span>pply
+      </button>
+    </div>
+  </main>
+</div>
+<p></p>
+<div class="window">
+  <header>
+    <h1>System Properties</h1>
+    <div class="tools">
+      <button type="button">×</button>
+    </div>
+  </header>
+  <main>
+    <fieldset>
+      <legend>Advanced settings</legend>
+      <button type="button">
+        <span class="shortcut">F</span>ile System...
+      </button>
+      <button type="button"><span class="shortcut">G</span>raphics...</button>
+      <button type="button">
+        <span class="shortcut">V</span>irtual Memory...
+      </button>
+    </fieldset>
+
+    <div class="dialog-actions">
+      <button type="button">OK</button>
+      <button type="button">Cancel</button>
+      <button type="button" disabled>
+        <span class="shortcut">A</span>pply
+      </button>
+    </div>
+  </main>
+</div>
