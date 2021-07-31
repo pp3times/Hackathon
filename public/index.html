@@ -45,53 +45,8 @@
       </div>
       <div class="right-menu">
         <p class="time"></p>
-        <!-- <p>hello world</p> -->
       </div>
     </footer>
   </body>
-  <script>
-    // make start button can't drag
-    $(".start-btn").attr('draggable', false);
-
-    // toggle start menu
-    $(window).click((e) => {
-      if (e.target != $(".start-btn")[0]) {
-        $(".start-menu-win").removeClass("active-menu");
-      } else {
-        $(".start-menu-win").toggleClass("active-menu");
-      }
-    })
-    // const getTime = () => {
-    //   const date = new Date();
-    //   let hour = date.getHours();
-    //   let hourPostFix = 'AM';
-    //   let min = date.getMinutes();
-    //   if (hour >= 12) {
-    //     hour -= 12;
-    //     hourPostFix = 'PM';
-    //   }
-    //   if (hour === 0) {
-    //     hour = 12;
-    //   }
-    //   if (min < 10) {
-    //     min = '0' + min;
-    //   }
-    //   return `${hour}:${min} ${hourPostFix}`;
-    // };
-    const getTime = () => {
-      const date = new Date();
-      let hour = date.getHours();
-      let hourarray = ["เที่ยงคืน", "ตีหนึ่ง", "ตีสอง", "ตีสาม", "ตีสี่", "ตีห้า", "หกโมง", "เจ็ดโมง", "แปดโมง", "เก้าโมง", "สิบโมง", "สิบเอ็ดโมง", "เที่ยง", "บ่ายโมง", "บ่ายสอง", "บ่ายสาม", "สี่โมง", "ห้าโมง", "หกโมง", "หนึ่งทุ่ม", "สองทุ่ม", "สามทุ่ม", "สี่ทุ่ม", "ห้าทุ่ม"]
-      let min = date.getMinutes();
-      let pmin = Math.floor(min/10)
-      let smin = min%10;
-      let minarray = ["", "หนึ่ง", "สอง", "สาม", "สี่", "ห้า", "หก", "เจ็ด", "แปด", "เก้า"]
-      let preminarray = ["", "สิบ", "ยี่สิบ", "สามสิบ", "สี่สิบ", "ห้าสิบ"]
-      return `${hourarray[hour]}${preminarray[pmin]}${minarray[smin]}`
-    }
-    setInterval(() => {
-      document.querySelector(".time").innerHTML = getTime();
-      $(".time").css("color", `hsl(${Math.random()*360}, ${100}%, ${50}%)`);
-    }, 1000);
-  </script>
+  <script src="index.js"></script>
 </html>
