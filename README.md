@@ -1,4 +1,4 @@
-# Hackathon
+# Stupid Hackathon Thailand 5
 
 First install node js
 
