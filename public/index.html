@@ -5,13 +5,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hackathon</title>
-    <link rel="stylesheet" href="css/tailwind.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/box.css">
-    <link rel="stylesheet" href="https://unpkg.com/98.css" />
     <meta name="theme-color" content="#fff" />
     <meta name="description" content="ก็คนเขาอยากด่า">
+    <title>Hackathon</title>
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="stylesheet" href="css/box.css">
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" async></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous" async></script>
 </head>
 
 <body>
@@ -32,18 +36,18 @@
                 alt="ie" />
             <div class="text-xs">สำรวจอินเทอร์เน็ต</div>
         </div>
+
     </div>
 
-    <main id="content">
+    <main>
     </main>
 
     <script>
         function pageTarget(val) {
             if (val == 1) {
-                console.log(1);
                 $.get("components/main.asp", function (data, status) {
                     if (data) {
-                        $("#content").html(data);
+                        $("main").html(data);
                     } else {
                         alert("รายการขัดข้อง" + "\nสถานะ: " + status);
                     }
@@ -51,7 +55,6 @@
             }
         }
     </script>
-
 
     <footer>
         <div class="left-menu">
@@ -70,10 +73,7 @@
         </div>
     </footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-    integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
 <script src="index.js"></script>
 
 </html>

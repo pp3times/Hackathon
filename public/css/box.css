@@ -10,6 +10,16 @@
   margin-top: 2rem !important;
 }
 
+.btn-toggle-sence {
+  position: absolute;
+  right: 0;
+  margin-right: 3rem;
+  top: 10%;
+  cursor: pointer;
+  z-index: 999999;
+  background: #5ce6ff;
+}
+
 .box {
   height: 100vh;
   display: -webkit-box;
@@ -77,6 +87,7 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: .75rem;
+  background: #BFBFBF;
 }
 
 .box .inline-box .navbar ul {
