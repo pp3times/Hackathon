@@ -1,0 +1,121 @@
+.mt-1
+    margin-top: .5rem !important
+
+.mt-2
+    margin-top: 1rem !important
+
+.mt-3
+    margin-top: 2rem !important
+
+.box
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .inline-box
+        width: 60vw
+        min-height: 70vh
+        background: #BFBFBF
+        position: relative
+        border: 2px solid #fff
+        display: block
+
+        .title
+            width: 100%
+            background: linear-gradient(270deg, #1085D2 0%, #00007B 100%)
+            display: flex
+            justify-content: space-between
+            align-items: center
+            font-size: .75rem
+            padding: 0 .5rem
+            p
+                margin-left: .25rem
+                color: #fff
+
+            .group-title
+                display: flex
+
+                svg
+                    margin: 0 1px
+
+        .navbar
+            padding: 0 .5rem
+            position: relative
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            font-size: .75rem
+
+            ul
+                display: flex
+                list-style: none
+
+                li
+                    display: list-item
+
+                    a
+                        padding: 0 .3rem
+
+                        span
+                            text-decoration: underline
+
+                    a:hover
+                        background: #8F8F8F
+
+        #content
+            width: 100%
+            margin-left: auto
+            margin-right: auto
+
+            .text-head
+                text-align: center
+                font-size: 2rem
+                font-weight: normal
+                margin: .5rem .5rem
+
+            .main-box
+                padding: 1rem
+                display: flex
+                justify-content: center
+
+                form
+                    label
+                        font-weight: bold
+                    .form-label
+                        margin-bottom: .5rem
+
+                    textarea
+                        resize: none
+                    .form-control
+                        width: 27rem
+                        height: 8rem
+                        display: block
+                        font-size: 1rem
+
+                    .group-form
+                        display: flex
+                        justify-content: space-between
+                        width: 100%
+
+                        .group-check
+                            .form-check
+                                display: block
+                                min-height: 1.5rem
+                                margin-top: .125rem
+
+                                label
+                                    font-weight: bold
+                                    font-size: .75rem
+
+@media ( max-width:768px )
+    .box
+        width: 100vw
+
+        .inline-box
+            width: 100vw
+
+    .form-control
+        width: 30rem !important
+        height: 5rem !important

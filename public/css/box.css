@@ -1,0 +1,180 @@
+.mt-1 {
+  margin-top: .5rem !important;
+}
+
+.mt-2 {
+  margin-top: 1rem !important;
+}
+
+.mt-3 {
+  margin-top: 2rem !important;
+}
+
+.box {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box .inline-box {
+  width: 60vw;
+  min-height: 70vh;
+  background: #BFBFBF;
+  position: relative;
+  border: 2px solid #fff;
+  display: block;
+}
+
+.box .inline-box .title {
+  width: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(#1085D2), to(#00007B));
+  background: linear-gradient(270deg, #1085D2 0%, #00007B 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .75rem;
+  padding: 0 .5rem;
+}
+
+.box .inline-box .title p {
+  margin-left: .25rem;
+  color: #fff;
+}
+
+.box .inline-box .title .group-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box .inline-box .title .group-title svg {
+  margin: 0 1px;
+}
+
+.box .inline-box .navbar {
+  padding: 0 .5rem;
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .75rem;
+}
+
+.box .inline-box .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.box .inline-box .navbar ul li {
+  display: list-item;
+}
+
+.box .inline-box .navbar ul li a {
+  padding: 0 .3rem;
+}
+
+.box .inline-box .navbar ul li a span {
+  text-decoration: underline;
+}
+
+.box .inline-box .navbar ul li a:hover {
+  background: #8F8F8F;
+}
+
+.box .inline-box #content {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box .inline-box #content .text-head {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  margin: .5rem .5rem;
+}
+
+.box .inline-box #content .main-box {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box .inline-box #content .main-box form label {
+  font-weight: bold;
+}
+
+.box .inline-box #content .main-box form .form-label {
+  margin-bottom: .5rem;
+}
+
+.box .inline-box #content .main-box form textarea {
+  resize: none;
+}
+
+.box .inline-box #content .main-box form .form-control {
+  width: 27rem;
+  height: 8rem;
+  display: block;
+  font-size: 1rem;
+}
+
+.box .inline-box #content .main-box form .group-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.box .inline-box #content .main-box form .group-form .group-check .form-check {
+  display: block;
+  min-height: 1.5rem;
+  margin-top: .125rem;
+}
+
+.box .inline-box #content .main-box form .group-form .group-check .form-check label {
+  font-weight: bold;
+  font-size: .75rem;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 100vw;
+  }
+  .box .inline-box {
+    width: 100vw;
+  }
+  .form-control {
+    width: 30rem !important;
+    height: 5rem !important;
+  }
+}
+/*# sourceMappingURL=box.css.map */
