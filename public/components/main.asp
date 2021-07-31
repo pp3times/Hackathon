@@ -164,6 +164,17 @@
         <div id="content">
             <div class="text-head">อีเปรี้ยวอะ</div>
 
+            <div class="btn-toggle-sence">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20 5V6.66667M20 33.3333V35M35 20H33.3333M6.66667 20H5M30.6066 30.6066L29.4281 29.4281M10.5719 10.5719L9.3934 9.3934M30.6067 9.39349L29.4282 10.572M10.572 29.4282L9.39349 30.6067M26.6667 20C26.6667 23.6819 23.6819 26.6667 20 26.6667C16.3181 26.6667 13.3333 23.6819 13.3333 20C13.3333 16.3181 16.3181 13.3333 20 13.3333C23.6819 13.3333 26.6667 16.3181 26.6667 20Z"
+                        stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+
+
+
             <div class="main-box">
                 <form action="">
                     <label class="form-label">คำด่า</label>
@@ -202,7 +213,7 @@
                                 <label>High</label>
                             </div>
                             <div class="field-row mt-2">
-                                <label for="text21">ด่าทำไม</label>
+                                <label for="text21">ด่ายาวแค่ไหน</label>
                                 <input id="text21" type="text" />
                             </div>
                         </div>
@@ -215,3 +226,35 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('.btn-toggle-sence').on('click', function () {
+        if ($(this).attr('data-click-state') == 1) {
+            $(this).attr('data-click-state', 0);
+            $('.inline-box').css('background-color', '#BFBFBF')
+            document.addEventListener('DOMContentLoaded', function () {
+                var div = document.createElement('div');
+                let html1 = "";
+                for (let i = 0; i < 40; i++) {
+                    html1 += `<div style="height: 129px; width: 96px; left: ${i}%; position: absolute; bottom: ${i / 30}%;z-index:999" class="card nine"></div><br>`
+                    $(function () {
+                        $(".card").draggable();
+                    });
+                }
+                for (let i = 0; i < 40; i++) {
+                    html1 += `<div style="height: 129px; width: 96px; top: ${i}%; position: absolute; right: ${i / 30}%;z-index:999" class="card four"></div><br>`
+                    $(function () {
+                        $(".card").draggable();
+                    });
+                }
+                document.body.innerHTML = html1;
+            }, false);
+        }
+        else {
+            $(this).attr('data-click-state', 1);
+            $('.inline-box').css('background-color', '#008000')
+
+
+        }
+    })
+</script>
