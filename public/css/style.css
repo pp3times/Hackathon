@@ -126,15 +126,6 @@ button.ok {
   background-size: cover;
   background-repeat: no-repeat;
 }
-#myComputer{
-  background-image: url("../img/myCom.png");
-}
-#e-Preaw{
-  background-image: url("../img/bin.png");
-}
-#IE{
-  background-image: url("../img/IE.png");
-}
 .right-menu {
   display: flex;
   align-items: center;
@@ -150,4 +141,17 @@ button.ok {
 }
 .win-icon {
   user-select: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.win-icon:hover {
+  filter: brightness(105%);
+}
+.icon-selected {
+  filter: drop-shadow(blue 0px 0px);
+  opacity: 0.8;
+}
+.text-selected {
+  background-color: rgb(11, 97, 255);
 }
