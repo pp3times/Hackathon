@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relax</title>
+    <style>
+      body {
+        background: #eee
+          url("http://www.top-windows-tutorials.com/images/2013/04/2014-03-Windows-Xp-Bliss-wallpaper.jpg")
+          no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        margin: 0;
+        height: 100vh;
+      }
+      ::selection {
+        background: none;
+      }
+      img {
+        width: 14vw;
+        position: absolute;
+        cursor: pointer;
+      }
+      #t {
+        position: absolute;
+      }
+      #task {
+        margin-top: 98vh;
+        width: 100%;
+        postion: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="myAudio">
+      <source
+        src="https://www.myinstants.com/media/sounds/erro.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <audio id="myAudio2">
+      <source
+        src="https://www.myinstants.com/media/sounds/musica_1.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <img
+      src="https://image.ibb.co/j4Vzxa/unnamed.png"
+      alt=""
+      onclick="err()"
+      id="t"
+    />
+    <img
+      src="https://image.ibb.co/cXubca/05_windows_xp_start_menu_desktop.jpg"
+      alt=""
+      id="task"
+    />
+    <img src="" alt="" />
+  </body>
+  <script>
+    var count = 0;
+    var x = 0;
+    function err() {
+      if (count > 1) {
+        document.getElementById("myAudio").pause();
+        document.getElementById("myAudio").play();
+      } else {
+        document.getElementById("myAudio").play();
+      }
+      var elem = document.createElement("img");
+      elem.setAttribute("src", "https://image.ibb.co/j4Vzxa/unnamed.png");
+      elem.setAttribute("onclick", "err()");
+      elem.style.marginTop = Math.floor(Math.random() * 75) + "vh";
+      elem.style.marginLeft = Math.floor(Math.random() * 86) + "vw";
+      document.body.appendChild(elem);
+      count++;
+      if (count == 4) {
+        document.getElementById("myAudio2").play();
+        crash();
+      }
+    }
+    document.addEventListener("mousedown", function () {
+      if (count < 4) {
+        document.getElementById("myAudio").play();
+      }
+    });
+    function bsod() {
+      var all = document.getElementsByTagName("img");
+      for (var i = 0; i < all.length; i++) {
+        all[i].style.display = "none";
+      }
+      document.body.style.background =
+        'rgb(0, 1, 171) url("http://cdn.wallpapersafari.com/39/11/eY6wEW.png") no-repeat';
+      var gif2 = document.createElement("img");
+      gif2.setAttribute(
+        "src",
+        "https://media2.giphy.com/media/12bSyZ2lLVvZ4s/giphy.gif"
+      );
+      gif2.style.marginTop = "80vh";
+      document.body.appendChild(gif2);
+    }
+    function crash() {
+      setTimeout(function () {
+        var spam = document.createElement("img");
+        spam.setAttribute("src", "https://image.ibb.co/j4Vzxa/unnamed.png");
+        spam.style.marginTop = Math.floor(Math.random() * 75) + "vh";
+        spam.style.marginLeft = Math.floor(Math.random() * 86) + "vw";
+        document.body.appendChild(spam);
+        x++;
+        if (x < 160) {
+          crash();
+        } else {
+          bsod();
+        }
+      }, 50);
+    }
+  </script>
+</html>
