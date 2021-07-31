@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon</title>
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="background-color: #008000;">
+      
+  </body>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var div = document.createElement('div');
+        let html1 = "";
+        for(let i=0; i<40; i++){
+            html1 += `<div style="height: 129px; width: 96px; left: ${i}%; position: absolute; bottom: ${i/30}%;" class="card nine"></div><br>`
+            $( function() {
+    $( ".card" ).draggable();
+  } );
+        }
+        for(let i=0; i<40; i++){
+            html1 += `<div style="height: 129px; width: 96px; top: ${i}%; position: absolute; right: ${i/30}%;;" class="card four"></div><br>`
+            $( function() {
+    $( ".card" ).draggable();
+  } );
+        }
+    document.body.innerHTML = html1;
+}, false);
+  </script>
+</html>
