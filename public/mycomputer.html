@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="css/tailwind.css" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
+    *{
+      user-select: none;
+    }
+    .text-xxs {
+      font-size: 0.65rem;
+    }
     .my-computer-div {
       width: 100vw;
       height: 100vh;
@@ -16,12 +22,12 @@
       /* border: 2px solid #0831D9; */
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
-
-
     }
-    .navbar-mycomputer{
+
+    .navbar-mycomputer {
       background-color: #0054E6;
     }
+
     .icon-navbar-mycomputer {
       width: 20px;
       height: 20px;
@@ -29,41 +35,252 @@
       background-size: contain;
       background-image: url(../public/img/myCom.png);
     }
-    .pumm{
+
+    .pumm {
       width: 20px;
       height: 20px;
       background-repeat: no-repeat;
       background-size: contain;
     }
-    .tap1{
-      padding: 3px;
-    }
+
     .icon-close-mycomputer {
       background-image: url(../public/img/close.png);
     }
-    .icon-minimize-mycomputer{
+
+    .icon-minimize-mycomputer {
       background-image: url(../public/img/minimize.png);
     }
-    .icon-pidd-mycomputer{
+
+    .icon-pidd-mycomputer {
       background-image: url(../public/img/pidd.png);
     }
-    .option-mycomputer{
+
+    .option-mycomputer,
+    .function-bar-mycomputer,
+    .address-mycomputer {
       background-color: #EDEAD6;
+      border-bottom: 1px solid #D5D1BD;
     }
-    .t-option:hover{
+
+    .function-icon-bar-back,
+    .function-icon-bar-next,
+    .function-icon-bar-up,
+    .function-icon-bar-search,
+    .function-icon-bar-folders,
+    .function-icon-bar-app {
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 22px;
+      height: 22px;
+    }
+
+    .function-icon-bar-back {
+      width: 24px;
+      height: 20px;
+      /* border: 1px solid black; */
+      background-image: url(../public/img/next.png);
+      transform: rotate(180deg);
+      /* background-image: url(../public/img/back1.png); */
+      /* filter: saturate(5%) contrast(80%) brightness(105%); */
+    }
+
+    .function-icon-bar-triangle {
+      width: 10px;
+      height: 10px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(../public/img/triangle.png);
+      filter: contrast(10%);  
+    }
+
+    .function-icon-bar-next {
+      width: 22px;
+      height: 20px;
+      margin-bottom: 1px;
+      background-image: url(../public/img/next.png);
+    }
+
+    .function-icon-bar-up {
+      background-image: url(../public/img/up.png);
+    }
+
+    .function-icon-bar-search {
+      background-image: url(../public/img/search.png);
+    }
+
+    .function-icon-bar-folders {
+      background-image: url(../public/img/folders.png);
+    }
+
+    .function-icon-bar-app {
+      background-image: url(../public/img/app.png);
+    }
+    .white-box-input{
+      border: 1px solid #AFAFFF;
+    }
+    .mycom-input{
+      width: 12px;
+      height: 12px;
+      background-image: url(../public/img/myCom.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .t-option:hover {
       background-color: #1660E8;
       color: white;
       cursor: pointer;
     }
-    .window-mycomputer{
-      width: 40px;
-      height: 20px;
+
+    .window-mycomputer {
+      width: 32px;
+      height: 18px;
       background-image: url(../public/img/window.png);
     }
-    .function-bar-mycomputer{
-      background-color: #EDEAD6;
+
+    .body-mycomputer {
+      background-color: #FFFFFF;
     }
-    
+
+    .sidebar-mycomputer {
+      background-color: #5066E0;
+    }
+
+    .system-task,
+    .other-places,
+    .details {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      background-color: hsl(210, 50%, 80%);
+    }
+
+    .system-task-topic {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      background-color: #CDD6FF;
+    }
+
+    .system-icon-view-info,
+    .system-pullup {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .system-icon-view-info {
+      background-image: url(../public/img/view-info.png);
+      width: 14px;
+      height: 14px;
+    }
+
+    .system-pullup {
+      background-image: url(../public/img/pullup.png);
+      width: 16px;
+      height: 16px;
+    }
+
+    .system-icon-add-or {
+      background-image: url(../public/img/add-or.png);
+      width: 14px;
+      height: 14px;
+    }
+
+    .system-icon-change {
+      background-image: url(../public/img/change.png);
+      width: 16px;
+      height: 16px;
+    }
+
+    .system-icon-my-network {
+      background-image: url(../public/img/my-network.png);
+      width: 16px;
+      height: 16px;
+    }
+
+    .system-icon-my-doc {
+      background-image: url(../public/img/my-doc.png);
+      width: 16px;
+      height: 16px;
+    }
+
+    .system-icon-shared-doc {
+      background-image: url(../public/img/share-doc.png);
+      width: 16px;
+      height: 16px;
+    }
+
+    .system-icon- {
+      background-image: url(../public/img/change.png);
+      width: 16px;
+      height: 16px;
+    }
+
+    .right-body {
+      background-color: white;
+    }
+
+    /* right icon */
+    .right-icon {
+      background-image: url(../public/img/file.jpg);
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .right-icon-dvd1 {
+      background-image: url(../public/img/DVD1.jpg);
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .right-icon-dvd2 {
+      background-image: url(../public/img/DVD2.jpg);
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .right-icon-github {
+      background-image: url(../public/img/github.jpg);
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .right-icon-contributors {
+      background-image: url(../public/img/contributors.png);
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    /* right layer */
+    .right-layer1 {
+      width: 100%;
+      height: 230px;
+    }
+    .right-layer2 {
+      width: 100%;
+      height: 120px;
+    }
+    .right-layer3 {
+      width: 100%;
+      height: 130px;
+    }
+    .right-layer4 {
+      width: 100%;
+      height: 100%;
+    }
+    .cl-purple{
+      color: rgb(32, 32, 90);
+    }
+    .cl-purple:hover{
+      color: rgb(43, 114, 255);
+      text-decoration: underline;
+    }
   </style>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
@@ -75,30 +292,148 @@
   <div class="my-computer-div absolute">
 
     <div class="navbar-mycomputer flex justify-between w-full">
-      <div class="flex tap1">
-        <div class="icon-navbar-mycomputer"></div>
-        <p style="color: white; font-weight: 600;" class="ml-1">My Computer</p>
+      <div class="flex mt-1">
+        <div class="icon-navbar-mycomputer ml-1 mb-1"></div>
+        <p style="color: white; font-weight: 600;" class="ml-1 text-sm">My Computer</p>
       </div>
-      <div class="flex tap1">
+      <div class="flex items-center mr-1">
         <div class="icon-close-mycomputer pumm"></div>
         <div class="icon-minimize-mycomputer pumm"></div>
         <div class="icon-pidd-mycomputer pumm"></div>
       </div>
     </div>
     <div class="option-mycomputer flex justify-between w-full">
-      <div class="flex space-x-3">
-        <p class="text-sm ml-1 t-option">File</p>
-        <p class="text-sm ml-1 t-option">Edit</p>
-        <p class="text-sm ml-1 t-option">View</p>
-        <p class="text-sm ml-1 t-option">Favorites</p>
-        <p class="text-sm ml-1 t-option">Tools</p>
-        <p class="text-sm ml-1 t-option">Help</p>
+      <div class="flex p-px">
+        <p class="text-xs t-option w-10 text-center">File</p>
+        <p class="text-xs t-option w-10 text-center">Edit</p>
+        <p class="text-xs t-option w-10 text-center">View</p>
+        <p class="text-xs t-option w-3/12 text-center">Favorites</p>
+        <p class="text-xs t-option w-10 text-center">Tools</p>
+        <p class="text-xs t-option w-10 text-center">Help</p>
       </div>
 
       <div class="window-mycomputer pumm"></div>
     </div>
-    <div class="function-bar-mycomputer flex w-full"></div>
-  <!-- <div class="w-20 h-auto top-8 left-8 absolute text-center text-white">
+    <div class="function-bar-mycomputer flex w-full h-10 items-center">
+      <div class="function-icon-bar-back ml-2"></div>
+      <p class="ml-1 text-xs">Back</p>
+      <div class="function-icon-bar-triangle ml-2 mr-1"></div>
+      <div class="function-icon-bar-next mt-1"></div>
+      <div class="function-icon-bar-triangle ml-2 mr-1"></div>
+      <div class="function-icon-bar-up mr-1"></div>
+      <div class="border h-8 mr-2" style="border-left: 1px solid #BDBDB5;"></div>
+      <div class="function-icon-bar-search"></div>
+      <p class="ml-1 mr-2 text-xs">Search</p>
+      <div class="function-icon-bar-folders"></div>
+      <p class="ml-1 mr-2 text-xs">Folders</p>
+      <div class="border h-8 mr-2" style="border-left: 1px solid #BDBDB5;"></div>
+      <div class="function-icon-bar-app"></div>
+      <div class="function-icon-bar-triangle ml-2 mr-1"></div>
+
+    </div>
+    <div class="address-mycomputer flex w-full h-5">
+      <p class="text-xs ml-2" style="color:#80807d;">Address</p>
+      <div class="white-box-input ml-1 w-full bg-white flex">
+        <div class="mt-0.5 mycom-input"></div>
+        <p class="ml-1 text-xxs">My Computer</p>
+      </div>
+    </div>
+    <div class="body-mycomputer flex flex-row w-full h-full">
+      <div class="sidebar-mycomputer w-42 h-full flex flex-col items-center">
+        <div class="system-task mt-4 w-10/12 h-20">
+          <div class="system-task-topic w-full h-5 flex justify-between items-center">
+            <p style="color: rgb(32, 32, 90);font-weight: 600;" class="text-sm ml-2">System-Tasks</p>
+            <div class="system-pullup mr-1"></div>
+          </div>
+          <div class="w-full h-full mt-1 ml-1">
+            <div class="system-icon-view-info ml-1 mb-0.5">
+              <p class="cl-purple text-xxs ml-5 w-20">System-Tasks</p>
+            </div>
+            <div class="system-icon-add-or ml-1 mb-0.5">
+              <p class="cl-purple text-xxs ml-5 w-48">Add or remove programs</p>
+            </div>
+            <div class="system-icon-change ml-1">
+              <p class="cl-purple text-xxs ml-5 w-48">Change a setting</p>
+            </div>
+          </div>
+        </div>
+        <div class="other-places mt-4 w-10/12 h-24">
+          <div class="system-task-topic w-full h-5 w-full h-5 flex justify-between items-center">
+            <p style="color: rgb(32, 32, 90);font-weight: 600;" class="text-sm ml-2">Other Places</p>
+            <div class="system-pullup mr-1"></div>
+          </div>
+          <div class="w-full h-full mt-1 ml-1">
+            <div class="system-icon-my-network ml-1 mb-0.5">
+              <p class="cl-purple text-xxs ml-5 w-48">My Network Places</p>
+            </div>
+            <div class="system-icon-my-doc ml-1 mb-0.5">
+              <p class="cl-purple text-xxs ml-5 w-48">My Documents</p>
+            </div>
+            <div class="system-icon-shared-doc ml-1 mb-0.5">
+              <p class="cl-purple text-xxs ml-5 w-48">Shared Documents</p>
+            </div>
+            <div class="system-icon-change ml-1">
+              <p class="cl-purple text-xxs ml-5 w-48">Control Panel</p>
+            </div>
+          </div>
+        </div>
+        <div class="details mt-4 w-10/12 h-20">
+          <div class="system-task-topic w-full h-5 w-full h-5 flex justify-between items-center">
+            <p style="font-weight: 600;" class="cl-purple text-sm ml-2">Details</p>
+            <div class="system-pullup mr-1"></div>
+          </div>
+          <div class="w-full h-full mt-1 ">
+            <div class="system-icon-medium ml-1">
+              <p class="cl-purple text-xxs ml-5 w-20">System-Tasks</p>
+            </div>
+            <div class="system-icon-blog ml-1">
+              <p class="cl-purple text-xxs ml-5 w-48">Add or remove programs</p>
+            </div>
+            <div class="system-icon-mine ml-1">
+              <p class="cl-purple text-xxs ml-5 w-48">Change a setting</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- เริ่มขวา -->
+      <div class="w-full h-full right-body">
+        <!-- layer1 -->
+        <div class="right-layer1">
+            <p class="cl-purple mt-1 ml-4 w-30">File Stored on This computer</p>
+            <div class="right-icon mt-4 ml-5"></div>
+            <p class=" cl-purple ml-24 -mt-11 w-80">Share Doccuments</p>
+            <div class="right-icon mt-12 ml-5"></div>
+            <p class="cl-purple ml-24 -mt-11 w-80">User's Documents</p>
+        </div>
+        <!-- layer2 -->
+        <div class="right-layer2 flex">
+          <p class="cl-purple ml-4 w-30 mt-1">Hard Disk Drives</p>
+          <div class="right-icon-dvd1 -ml-28 mt-12"></div>
+          <p class="cl-purple mt-16 ml-6 w-80">Local Disk (C:)</p>
+        </div>
+        <!-- layer3 -->
+        <div class="right-layer3 flex">
+          <p class="cl-purple ml-4 w-30 mt-1">Devices with Removeable Storage</p>
+          <div class="right-icon-dvd2 mt-12 -ml-56"></div>
+          <p class="cl-purple mt-16 ml-6 w-30">CD Drive (D:)</p>
+        </div>
+        <!-- layer4 -->
+        <div class="right-layer4 flex">
+          <p class="cl-purple w-30 ml-4">About Me :)</p>
+          <div class="right-icon-github mt-12 -ml-16"></div>
+          <p class="cl-purple w-30 ml-4 mt-16">Github</p>
+          <div class="right-icon-contributors mt-36 -ml-32"></div>
+          <p class="cl-purple w-30 mt-40 ml-6">Contributors</p>
+        </div>
+      </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- <div class="w-20 h-auto top-8 left-8 absolute text-center text-white">
     <a href="#">
       <div class="w-10 mb-6">
         <div class="w-8 h-8 center-x" id="myComputer"></div>
@@ -136,20 +471,20 @@
       <p>hello world</p>
     </div>
   </footer> -->
-  <script>
-    // make start button can't drag
-    $(".start-btn").attr('draggable', false);
-    // close start menu
-    $(window).click((e) => {
-      if (e.target != $(".start-btn")[0]) {
-        $(".start-menu-win").removeClass("active-menu");
+    <script>
+      // make start button can't drag
+      $(".start-btn").attr('draggable', false);
+      // close start menu
+      $(window).click((e) => {
+        if (e.target != $(".start-btn")[0]) {
+          $(".start-menu-win").removeClass("active-menu");
+        }
+      })
+      // toggle start menu button function
+      start = () => {
+        $(".start-menu-win").toggleClass("active-menu");
       }
-    })
-    // toggle start menu button function
-    start = () => {
-      $(".start-menu-win").toggleClass("active-menu");
-    }
-  </script>
+    </script>
 </body>
 
 </html>
