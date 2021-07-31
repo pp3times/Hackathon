@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/pp3times/Hackathon#readme",
   "dependencies": {
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^2.2.7",
+    "xp.css": "^0.2.4"
   }
 }

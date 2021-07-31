@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon</title>
+    <link rel="stylesheet" href="css/ie.css">
+</head>
+<body>
+    <div class="ie-bar w-full h-7 flex justify-between">
+        <div class="ie-bar-1 w-full h-6 flex items-center ">
+            <img class="ml-1 w-4" src="/public/img/le-logo.svg" alt="">
+            <p class="ml-1 text-white text-sm">Internet Explorer</p>
+        </div>
+        <div class="h-7 flex pr-1 items-center">
+            <img class="h-6 button-bar" src="/public/img/ie-rop.svg" alt="">
+            <img class="h-6 button-bar" src="/public/img/ie-plus.svg" alt="">
+            <img class="h-6 button-bar" src="/public/img/ie.delete.svg" alt="">
+        </div>
+    </div>
+    <div class="ie-background w-full h-6 flex justify-between border-bottom">
+        <div class="w-25 flex text-sm">
+            <div class="ml-1 hoverie py-1 flex justify-center items-center"><p>File</p></div>
+            <div class="ml-1 hoverie py-1 flex justify-center items-center"><p>Edit</p></div>
+            <div class="ml-1 hoverie py-1 flex justify-center items-center"><p>View</p></div>
+            <div class="ml-1 hoverie py-1 flex justify-center items-center"><p>Favourites</p></div>
+            <div class="ml-1 hoverie py-1 flex justify-center items-center"><p>tools</p></div>
+            <div class="ml-1 hoverie py-1 flex justify-center items-center"><p>Help</p></div>
+        </div>
+        <div">
+            <img class="border-left" src="/public/img/ie-winoduw-logo.svg" alt="">
+        </div>
+    </div>
+    <!-- check -->
+    <div class="w-full h-10 ie-background flex items-center border-bottom">
+        <div class="ml-1 box flex items-center h-8 py-1">
+            <img class="h-6" src="https://cdn.discordapp.com/attachments/870731779462561852/871011094322360380/next.png" alt="">
+            <p class="text-sm ml-1">Back</p>
+            <img class="h-3 ml-2" src="/public/img/downn.svg" alt="">
+        </div>
+        <div class="ml-1 box flex items-center h-8">
+            <img class="h-6" src="https://cdn.discordapp.com/attachments/870731779462561852/871009877663834162/next.png" alt="">
+            <img class="h-3 ml-2" src="/public/img/downn.svg" alt="">
+        </div>
+        
+        <div id="logo1" class="ml-1 box">
+            <img id="img-logo1" class="h-8" src="/public/img/logo1.svg" onmousedown="logo1()" onmouseup="logo1re()" alt="">
+        </div>
+        <div id="logo2" class="box">
+            <img id="img-logo2" class="h-8" src="/public/img/logo2.svg" onmousedown="logo2()" onmouseup="logo2re()" alt="">
+        </div>
+        <div id="logo3" class="box">
+            <img id="img-logo3" class="h-8" src="/public/img/logo3.svg" onmousedown="logo3()" onmouseup="logo3re()" alt="">
+        </div>
+        <div class="h-7 ml-1 stick"></div>
+        <div id="logo4" class="ml-1 box border-left flex items-center">
+            <img id="img-logo4" class="h-8" src="/public/img/logo4.svg" onmousedown="logo4()" onmouseup="logo4re()" alt="">
+            <p class="ml-1 text-sm pr-1">Search</p>
+        </div>
+        <div id="logo5" class="ml-1 box border-left flex items-center">
+            <img id="img-logo5" class="h-8" src="/public/img/logo5.svg" onmousedown="logo5()" onmouseup="logo5re()" alt="">
+            <p class="ml-1 text-sm pr-1">Favourites</p>
+        </div>
+        <div id="logo6" class="box border-left flex items-center">
+            <img id="img-logo6" class="h-8" src="/public/img/logo6.svg" onmousedown="logo6()" onmouseup="logo6re()" alt="">
+        </div>
+        <div class="h-7 ml-1 stick"></div>
+        <div id="logo7" class="box border-left flex items-center ml-1">
+            <img id="img-logo7" class="h-8" src="/public/img/logo7.svg" onmousedown="logo7()" onmouseup="logo7re()" alt="">
+        </div>
+        <div id="logo8" class="box border-left flex items-center ml-1">
+            <img id="img-logo8" class="h-8" src="/public/img/logo8.svg" onmousedown="logo8()" onmouseup="logo8re()" alt="">
+        </div>
+        <div id="logo9" class="box border-left flex items-center ml-1">
+            <img id="img-logo9" class="h-8" src="/public/img/logo9.svg" onmousedown="logo9()" onmouseup="logo9re()" alt="">
+        </div>
+        <div id="logo10" class="box border-left flex items-center ml-1">
+            <img id="img-logo10" class="h-8" src="/public/img/logo10.svg" onmousedown="logo10()" onmouseup="logo10re()" alt="">
+        </div>
+    </div>
+    <div class="w-full h-6" style="background: rgb(156, 150, 150);">
+        <div class="w-full h-5 ie-background flex items-center">
+            <div class="ml-2 w-5"><p class="text-sm" style="color: rgb(158, 155, 155);">Address</p></div>
+            <div class="ml-12 bg-white h-4 flex items-center justify-between" style="width: 87%;">
+                <div class="flex items-center">
+                    <img class="h-4" src="/public/img/le-logo.svg" alt="">
+                    <p class="ml-1 text-sm">https://www.google.com</p>
+                </div>
+                <div>
+                    <img class="h-4 mt-1" src="/public/img/downbotton.svg" alt="">
+                </div>
+            </div>
+            <div class="flex items-center box">
+                <img class="ml-1 h-4" src="/public/img/greennext.svg" alt="">
+                <p class="ml-1 text-sm">Go</p>
+            </div>
+            <div class="h-4 ml-1 stick"></div>
+            <div class="box h-4 flex items-center" style="color: rgb(189, 178, 178);">
+                <p class="ml-1 text-sm">Links</p>
+            </div>
+            <div>
+                <img class="ml-2 mb-2 h-1" src="/public/img/arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="flex absolute bottom-0 w-full h-6" style="background-color: rgb(175, 171, 171);">
+            <div class="ml-1 ie-background w-full ie-background bottom-0 absolute items-center flex justify-between" style="height: 1.4rem;">
+                <div class="flex items-center">
+                    <img class="h-4" src="/public/img/le-logo.svg" alt="">
+                    <p class="ml-1 text-sm">Done</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="h-4 ml-1 stick"></div>
+                    <div class="w-5"></div>
+                    <div class="h-4 ml-1 stick"></div>
+                    <div class="w-5"></div>
+                    <div class="h-4 ml-1 stick"></div>
+                    <div class="w-5"></div>
+                    <div class="h-4 ml-1 stick"></div>
+                    <div class="w-5"></div>
+                    <div class="h-4 ml-1 stick"></div>
+                    <div class="w-5"></div>
+                    <div class="h-4 ml-1 stick"></div>
+                    <img class="ml-1 h-4" src="/public/img/earth.svg" alt="">
+                    <p class="text-sm ml-1">Internet</p>
+                    <div class="w-28"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function logo1(){
+            document.getElementById("logo1").classList.add("c-bg")
+            document.getElementById("img-logo1").classList.add("animatee")
+        }
+        function logo1re(){
+            document.getElementById("logo1").classList.remove("c-bg")
+            document.getElementById("img-logo1").classList.remove("animatee")
+        }
+        function logo2(){
+            document.getElementById("logo2").classList.add("c-bg")
+            document.getElementById("img-logo2").classList.add("animatee")
+        }
+        function logo2re(){
+            document.getElementById("logo2").classList.remove("c-bg")
+            document.getElementById("img-logo2").classList.remove("animatee")
+        }
+        function logo3(){
+            document.getElementById("logo3").classList.add("c-bg")
+            document.getElementById("img-logo3").classList.add("animatee")
+        }
+        function logo3re(){
+            document.getElementById("logo3").classList.remove("c-bg")
+            document.getElementById("img-logo3").classList.remove("animatee")
+        }
+        function logo4(){
+            document.getElementById("logo4").classList.add("c-bg")
+            document.getElementById("img-logo4").classList.add("animatee")
+        }
+        function logo4re(){
+            document.getElementById("logo4").classList.remove("c-bg")
+            document.getElementById("img-logo4").classList.remove("animatee")
+        }
+        function logo5(){
+            document.getElementById("logo5").classList.add("c-bg")
+            document.getElementById("img-logo5").classList.add("animatee")
+        }
+        function logo5re(){
+            document.getElementById("logo5").classList.remove("c-bg")
+            document.getElementById("img-logo5").classList.remove("animatee")
+        }
+        function logo6(){
+            document.getElementById("logo6").classList.add("c-bg")
+            document.getElementById("img-logo6").classList.add("animatee")
+        }
+        function logo6re(){
+            document.getElementById("logo6").classList.remove("c-bg")
+            document.getElementById("img-logo6").classList.remove("animatee")
+        }
+        function logo7(){
+            document.getElementById("logo7").classList.add("c-bg")
+            document.getElementById("img-logo7").classList.add("animatee")
+        }
+        function logo7re(){
+            document.getElementById("logo7").classList.remove("c-bg")
+            document.getElementById("img-logo7").classList.remove("animatee")
+        }
+        function logo8(){
+            document.getElementById("logo8").classList.add("c-bg")
+            document.getElementById("img-logo8").classList.add("animatee")
+        }
+        function logo8re(){
+            document.getElementById("logo8").classList.remove("c-bg")
+            document.getElementById("img-logo8").classList.remove("animatee")
+        }
+        function logo9(){
+            document.getElementById("logo9").classList.add("c-bg")
+            document.getElementById("img-logo9").classList.add("animatee")
+        }
+        function logo9re(){
+            document.getElementById("logo9").classList.remove("c-bg")
+            document.getElementById("img-logo9").classList.remove("animatee")
+        }
+        function logo10(){
+            document.getElementById("logo10").classList.add("c-bg")
+            document.getElementById("img-logo10").classList.add("animatee")
+        }
+        function logo10re(){
+            document.getElementById("logo10").classList.remove("c-bg")
+            document.getElementById("img-logo10").classList.remove("animatee")
+        }
+    </script>
+</body>
+</html>
