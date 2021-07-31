@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 html, body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   width: 100%;
   background: url(/public/img/windows-xp.jpg) no-repeat center/cover;
@@ -96,4 +93,17 @@ button.ok {
 }
 .start-menu-win.active-menu {
   opacity: 1;
+}
+#myComputer, #e-Preaw, #IE{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#myComputer{
+  background-image: url("../img/myCom.png");
+}
+#e-Preaw{
+  background-image: url("../img/bin.png");
+}
+#IE{
+  background-image: url("../img/IE.png");
 }

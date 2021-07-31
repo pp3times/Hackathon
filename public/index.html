@@ -19,16 +19,19 @@
     ></script>
   </head>
   <body>
-    <div class="error">
-      <div class="title">
-        Criticle Error
-        <button class="close-button">X</button>
+    <div class="w-20 h-auto top-8 left-8 absolute text-center text-white">
+      <div class="w-20 mb-6">
+        <div class="w-16 h-16 center-x" id="myComputer"></div>
+        <div class="text-xs">My Computer</div>
       </div>
-      <div class="message">
-        <img src="img/error.png" alt="" />An error has occurred while trying to
-        display an error message.
+      <div class="w-20 mb-6">
+        <div class="w-16 h-16 center-x" id="e-Preaw"></div>
+        <div class="text-xs">E-Preaw</div>
       </div>
-      <button class="ok"><span>OK</span></button>
+      <div class="w-20 mb-6">
+        <div class="w-16 h-16 center-x" id="IE"></div>
+        <div class="text-xs">Internet <br> Explorer</div>
+      </div>
     </div>
     <footer id="footer">
       <span class="start-btn">
@@ -40,19 +43,6 @@
       <img src="img/start-menu.png" alt="" />
     </div>
     <script>
-      $(".error").draggable();
-      var error = '<div class="error">' + $(".error").html() + "</div>",
-        x = window.innerWidth / 3;
-      y = window.innerHeight / 3;
-      $("body").on("click", ".ok", ".close-button", function () {
-        $("body").append(error);
-        $(".error")
-          .last()
-          .css({ top: y + "px", left: x + "px" })
-          .draggable();
-        x += 4;
-        y += 4;
-      });
       $(document).ready(function () {
         $(".start-btn").click(function () {
           $(".start-menu-win").toggleClass("active-menu");
