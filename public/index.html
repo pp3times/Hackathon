@@ -8,17 +8,36 @@
   <title>Hackathon</title>
   <link rel="stylesheet" href="css/tailwind.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/window.css" />
   <meta name="theme-color" content="#fff" />
   <meta name="description" content="ก็คนเขาอยากด่า">
 </head>
 
 <body>
   <div class="w-20 h-auto top-8 left-8 absolute text-center text-white">
+    <div class="window" id="e-preaw">
+      <div class="headbg"></div>
+			<header class="windowTitle">
+				<div class="windowTitleText">อีเปรี้ยว</div>
+        <div class="menubar">
+          <button class="headbtn minimize"></button>
+          <button class="headbtn close" onclick="epreawCloseWindow()"></button>
+        </div>
+			</header>
+			<div class="windowContent">
+        <div class="e-preaw" style="background-color: #008000; display: flex;">
+          <div class="holy">
+            <textarea id="text">หิวข้าวไหม</textarea>
+            <button onclick=speak()>Speak</button>
+          </div>
+        </div>
+			</div>
+		</div>
     <div class="mb-6 win-icon mycom">
       <img class="icon w-8 mb-2 h-8 center-x" src="data:image/png;base64,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" alt="mycom" />
       <div class="text-xs">คอมฉัน</div>
     </div>
-    <div class="mb-6 win-icon preaw">
+    <div class="mb-6 win-icon preaw" ondblclick="open_E_Preaw()">
       <img class="icon w-8 mb-2 h-8 center-x" src="img/logo.png" alt="preaw" />
       <div class="text-xs">อีเปรี้ยว</div>
     </div>
@@ -45,5 +64,5 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 <script src="index.js"></script>
-
+<script src="speak.js"></script>
 </html>
