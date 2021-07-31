@@ -30,8 +30,16 @@ const getTime = () => {
 // update and random stupid time text color
 setInterval(() => {
   document.querySelector(".time").innerHTML = getTime();
-  $(".time").css("color", `hsl(${Math.random()*360}, ${100}%, ${50}%)`);
 }, 1000);
+
+var x = 0;
+setInterval(() => {
+  $(".time").css("color", `hsl(${x}, ${100}%, ${50}%)`);
+  if (x >= 360) {
+    x = 0;
+  }
+  x++;
+}, 10)
 
 // select and highlight desktop icon
 $(".win-icon").click((e) => {
