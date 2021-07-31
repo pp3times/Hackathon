@@ -7,10 +7,57 @@
     <title>Hackathon</title>
     <link rel="stylesheet" href="css/tailwind.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="bg-blue-500 h-screen flex justify-center items-center">
-      <h1 class="text-10xl text-white">Coming soon</h1>
+    <div class="error">
+      <div class="title">
+        Criticle Error
+        <button class="close-button">X</button>
+      </div>
+      <div class="message">
+        <img src="img/error.png" alt="" />An error has occurred while trying to
+        display an error message.
+      </div>
+      <button class="ok"><span>OK</span></button>
     </div>
+    <footer id="footer">
+      <span class="start-btn">
+        <img src="img/start-btn.png" alt="" />
+      </span>
+      <img src="img/win-bottom.png" alt="" />
+    </footer>
+    <div class="start-menu-win">
+      <img src="img/start-menu.png" alt="" />
+    </div>
+    <script>
+      $(".error").draggable();
+      var error = '<div class="error">' + $(".error").html() + "</div>",
+        x = window.innerWidth / 3;
+      y = window.innerHeight / 3;
+      $("body").on("click", ".ok", ".close-button", function () {
+        $("body").append(error);
+        $(".error")
+          .last()
+          .css({ top: y + "px", left: x + "px" })
+          .draggable();
+        x += 4;
+        y += 4;
+      });
+      $(document).ready(function () {
+        $(".start-btn").click(function () {
+          $(".start-menu-win").toggleClass("active-menu");
+        });
+      });
+    </script>
   </body>
 </html>
