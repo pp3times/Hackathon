@@ -23,12 +23,20 @@ footer {
   flex: 1 1 0%;
   overflow: hidden;
 }
+.start-menu {
+  left: 0px;
+  box-shadow: rgb(0 0 0 / 50%) 2px 4px 2px;
+  bottom: 100%;
+}
 .start-btn {
   margin-right: 10px;
   position: relative;
   cursor: pointer;
-  height: 100%;
   user-select: none;
+}
+.menu-items {
+  display: flex;
+  align-items: center;
 }
 .start-btn:hover {
   filter: brightness(105%);
