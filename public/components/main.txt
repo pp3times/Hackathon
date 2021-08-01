@@ -213,11 +213,11 @@
 
                     <div class="main-box">
                         <form action="" id="upload_form">
-                            <label class="form-label wtf">คำข้อง</label>
-                            <textarea name="" id="showText" class="form-control"></textarea>
+                            <label class="form-label wtf">คำด่า!!!</label>
+                            <textarea id="showText" class="form-control" readonly></textarea>
 
                             <label class="form-label wtf" style="margin-top: .5rem;">ถึงใคร</label>
-                            <input type="text" name="name" id="" class="form-control" style="height: 2rem;"></input>
+                            <input type="text" name="name" id="" class="form-control" style="height: 2rem;" required></input>
 
                             <div class="group-form">
                                 <div class="group-check">
@@ -245,12 +245,12 @@
                                     <label class="wtf">ระดับแร๊ง</label>
                                     <div class="field-row" style="width: 200px">
                                         <label for="range26" class="wtf">Low</label>
-                                        <input id="range26" name="level" type="range" min="1" max="3" value="2" />
+                                        <input id="range26" name="level" type="range" min="1" max="3" value="2" required/>
                                         <label class="wtf">High</label>
                                     </div>
                                     <div class="field-row mt-2">
                                         <label for="text21" class="wtf">ความยาว</label>
-                                        <input class="" type="number" name="length" id="" min="1" max="10">
+                                        <input class="" type="number" name="length" id="" min="1" max="10" required>
                                     </div>
                                 </div>
                             </div>
