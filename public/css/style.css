@@ -8,6 +8,7 @@
 html, body {
   height: 100vh;
   width: 100%;
+  /* background: url("https://raw.githubusercontent.com/pp3times/Hackathon/main/public/img/pbg.png") no-repeat center/cover; */
   background: url("https://raw.githubusercontent.com/pp3times/Hackathon/main/public/img/windows-xp.jpg") no-repeat center/cover;
   overflow: hidden;
 }
@@ -24,11 +25,6 @@ footer {
   height: 100%;
   flex: 1 1 0%;
   overflow: hidden;
-}
-.start-menu {
-  left: 0px;
-  box-shadow: rgb(0 0 0 / 50%) 2px 4px 2px;
-  bottom: 100%;
 }
 .start-btn {
   margin-right: 10px;
@@ -102,25 +98,15 @@ button.ok {
   left: 50%;
   transform: translateX(-50%);
 }
-.start-menu-win {
-  position: fixed;
-  bottom: 30px;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  user-select: none;
-  pointer-events: none;
-}
-.start-menu-win.active-menu {
-  opacity: 1;
-}
 #myComputer, #e-Preaw, #IE{
   background-size: cover;
   background-repeat: no-repeat;
 }
 .right-menu {
+  width: 130px;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   flex-shrink: 0;
   border-left: 1px solid rgb(16, 66, 175);
   height: 100%;
@@ -176,11 +162,111 @@ button.ok {
   justify-content: center;
   align-items: center;
   /* background-color: black; */
-  width: 500px;
-  height: 300px;
 }
 #text {
   width: 300px;
   color:#000;
   outline: none;
+}
+.start-menu-win {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  user-select: none;
+  pointer-events: none;
+  width: 400px;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 50%) 2px 4px 2px;
+  border-radius: 10px;
+}
+.start-menu-win.active-menu {
+  opacity: 1;
+}
+.start-menu-head {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet,red);
+  background-repeat:repeat-x;
+  animation:go 5s linear infinite;
+}
+@keyframes go{
+  0%{background-position:0;}
+  100%{background-position:400px 0;}
+}
+@keyframes gobackward{
+  0%{background-position:400px 0;}
+  100%{background-position:0;}
+}
+.profile {
+  margin-left: 10px;
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+  border: solid 5px blue;
+  background-color: red;
+}
+.profile-name {
+  color: white;
+  margin-left: 10px;
+  font-size: 2em;
+}
+.start-menu-content {
+  height: 300px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.start-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 200px;
+  background-color: wheat;
+}
+.start-items:hover {
+  background-color: black;
+}
+.start-items-pict {
+  height: 40px;
+  width: 40px;
+  background-color: black;
+}
+.start-items-text {
+  margin-left: 10px;
+  font-size: 1.5em;
+}
+.power-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50px;
+  width: 400px;
+  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet,red);
+  background-repeat:repeat-x;
+  animation:gobackward 5s linear infinite;
+}
+.power {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 10px;
+  height: 40px;
+  width: 120px;
+  background-color: #a4d35999;
+  outline: solid 2px blue;
+}
+.power:hover {
+  filter: brightness(110%);
+}
+.powericon {
+  height: 40px;
+  width: 40px;
+}
+.powertext {
+  color: white;
+  margin-left: 5px;
 }
