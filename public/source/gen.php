@@ -135,33 +135,3 @@
 
 	echo json_encode(generate($_GET['name'], $_GET['level'], $_GET['length']), JSON_UNESCAPED_UNICODE);
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
