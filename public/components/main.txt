@@ -266,7 +266,7 @@
         </div>
 
 
-        <footer>
+      <footer>
             <div class="left-menu">
                 <div class="start-menu-win">
                     <div class="start-menu-head">
