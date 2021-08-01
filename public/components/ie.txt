@@ -1,13 +1,13 @@
 <div class="ie-main">
         <div class="ie-bar w-full h-7 flex justify-between">
             <div class="ie-bar-1 w-full h-6 flex items-center ">
-                <img class="ml-1 w-4" src="/public/img/le-logo.svg" alt="">
+                <img class="ml-1 w-4" src="/img/le-logo.svg" alt="">
                 <p class="ml-1 text-white text-sm">Internet Explorer</p>
             </div>
             <a class="h-7 flex pr-1 items-center ie-group" href="javascript:void(0)" onclick="pageTarget(0)">
-                <img class="h-6 button-bar" src="/public/img/ie-rop.svg" alt="">
-                <img class="h-6 button-bar" src="/public/img/ie-plus.svg" alt="">
-                <img class="h-6 button-bar" src="/public/img/ie.delete.svg" alt="">
+                <img class="h-6 button-bar" src="/img/ie-rop.svg" alt="">
+                <img class="h-6 button-bar" src="/img/ie-plus.svg" alt="">
+                <img class="h-6 button-bar" src="/img/ie.delete.svg" alt="">
             </a>
         </div>
         <div class="ie-background w-full h-6 flex justify-between border-bottom">
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div>
-                <img class="border-left" src="/public/img/ie-winoduw-logo.svg" alt="">
+                <img class="border-left" src="/img/ie-winoduw-logo.svg" alt="">
             </div>
         </div>
         <!-- check -->
@@ -41,56 +41,56 @@
                 <img class="h-6"
                     src="https://cdn.discordapp.com/attachments/870731779462561852/871011094322360380/next.png" alt="">
                 <p class="text-sm ml-1">Back</p>
-                <img class="h-3 ml-2" src="/public/img/downn.svg" alt="">
+                <img class="h-3 ml-2" src="/img/downn.svg" alt="">
             </div>
             <div class="ml-1 ie-box flex items-center h-8">
                 <img class="h-6"
                     src="https://cdn.discordapp.com/attachments/870731779462561852/871009877663834162/next.png" alt="">
-                <img class="h-3 ml-2" src="/public/img/downn.svg" alt="">
+                <img class="h-3 ml-2" src="/img/downn.svg" alt="">
             </div>
 
             <div id="logo1" class="ml-1 ie-box">
-                <img id="img-logo1" class="h-8 py-1" src="/public/img/logo1.svg" onmousedown="logo1()"
+                <img id="img-logo1" class="h-8 py-1" src="/img/logo1.svg" onmousedown="logo1()"
                     onmouseup="logo1re()" alt="">
             </div>
             <div id="logo2" class="ie-box">
-                <img id="img-logo2" class="h-8 py-1" src="/public/img/logo2.svg" onmousedown="logo2()"
+                <img id="img-logo2" class="h-8 py-1" src="/img/logo2.svg" onmousedown="logo2()"
                     onmouseup="logo2re()" alt="">
             </div>
             <div id="logo3" class="ie-box">
-                <img id="img-logo3" class="h-8 py-1" src="/public/img/logo3.svg" onmousedown="logo3()"
+                <img id="img-logo3" class="h-8 py-1" src="/img/logo3.svg" onmousedown="logo3()"
                     onmouseup="logo3re()" alt="">
             </div>
             <div class="h-7 ml-1 stick"></div>
             <div id="logo4" class="ml-1 ie-box border-left flex items-center">
-                <img id="img-logo4" class="h-8 py-1" src="/public/img/logo4.svg" onmousedown="logo4()"
+                <img id="img-logo4" class="h-8 py-1" src="/img/logo4.svg" onmousedown="logo4()"
                     onmouseup="logo4re()" alt="">
                 <p class="ml-1 text-sm pr-1">Search</p>
             </div>
             <div id="logo5" class="ml-1 ie-box border-left flex items-center">
-                <img id="img-logo5" class="h-8 py-1" src="/public/img/logo5.svg" onmousedown="logo5()"
+                <img id="img-logo5" class="h-8 py-1" src="/img/logo5.svg" onmousedown="logo5()"
                     onmouseup="logo5re()" alt="">
                 <p class="ml-1 text-sm pr-1">Favourites</p>
             </div>
             <div id="logo6" class="ie-box border-left flex items-center">
-                <img id="img-logo6" class="h-8 py-1" src="/public/img/logo6.svg" onmousedown="logo6()"
+                <img id="img-logo6" class="h-8 py-1" src="/img/logo6.svg" onmousedown="logo6()"
                     onmouseup="logo6re()" alt="">
             </div>
             <div class="h-7 ml-1 stick"></div>
             <div id="logo7" class="ie-box border-left flex items-center ml-1">
-                <img id="img-logo7" class="h-8 py-1" src="/public/img/logo7.svg" onmousedown="logo7()"
+                <img id="img-logo7" class="h-8 py-1" src="/img/logo7.svg" onmousedown="logo7()"
                     onmouseup="logo7re()" alt="">
             </div>
             <div id="logo8" class="ie-box border-left flex items-center ml-1">
-                <img id="img-logo8" class="h-8 py-1" src="/public/img/logo8.svg" onmousedown="logo8()"
+                <img id="img-logo8" class="h-8 py-1" src="/img/logo8.svg" onmousedown="logo8()"
                     onmouseup="logo8re()" alt="">
             </div>
             <div id="logo9" class="ie-box border-left flex items-center ml-1">
-                <img id="img-logo9" class="h-8 py-1" src="/public/img/logo9.svg" onmousedown="logo9()"
+                <img id="img-logo9" class="h-8 py-1" src="/img/logo9.svg" onmousedown="logo9()"
                     onmouseup="logo9re()" alt="">
             </div>
             <div id="logo10" class="ie-box border-left flex items-center ml-1">
-                <img id="img-logo10" class="h-8 py-1" src="/public/img/logo10.svg" onmousedown="logo10()"
+                <img id="img-logo10" class="h-8 py-1" src="/img/logo10.svg" onmousedown="logo10()"
                     onmouseup="logo10re()" alt="">
             </div>
         </div>
@@ -101,15 +101,15 @@
                 </div>
                 <div class="ml-12 bg-white h-4 flex items-center justify-between" style="width: 87%;">
                     <div class="flex items-center">
-                        <img class="h-4" src="/public/img/le-logo.svg" alt="">
+                        <img class="h-4" src="/img/le-logo.svg" alt="">
                         <p class="ml-1 text-sm">https://www.google.com</p>
                     </div>
                     <div>
-                        <img class="h-4 ie-mt-1" src="/public/img/downbotton.svg" alt="">
+                        <img class="h-4 ie-mt-1" src="/img/downbotton.svg" alt="">
                     </div>
                 </div>
                 <div class="flex items-center ie-box">
-                    <img class="ml-1 h-4" src="/public/img/greennext.svg" alt="">
+                    <img class="ml-1 h-4" src="/img/greennext.svg" alt="">
                     <p class="ml-1 text-sm">Go</p>
                 </div>
                 <div class="h-4 ml-1 stick"></div>
@@ -117,14 +117,14 @@
                     <p class="ml-1 text-sm">Links</p>
                 </div>
                 <div>
-                    <img class="ml-2 mb-2 h-1" src="/public/img/arrow.svg" alt="">
+                    <img class="ml-2 mb-2 h-1" src="/img/arrow.svg" alt="">
                 </div>
             </div>
             <div class="flex absolute bottom-0 w-full h-6" style="background-color: rgb(175, 171, 171);">
                 <div class="ml-1 ie-background w-full ie-background bottom-0 absolute items-center flex justify-between"
                     style="height: 1.4rem;">
                     <div class="flex items-center">
-                        <img class="h-4" src="/public/img/le-logo.svg" alt="">
+                        <img class="h-4" src="/img/le-logo.svg" alt="">
                         <p class="ml-1 text-sm">Done</p>
                     </div>
                     <div class="flex items-center">
@@ -139,7 +139,7 @@
                         <div class="h-4 ml-1 stick"></div>
                         <div class="w-5"></div>
                         <div class="h-4 ml-1 stick"></div>
-                        <img class="ml-1 h-4" src="/public/img/earth.svg" alt="">
+                        <img class="ml-1 h-4" src="/img/earth.svg" alt="">
                         <p class="text-sm ml-1">Internet</p>
                         <div class="w-28"></div>
                     </div>
@@ -147,7 +147,7 @@
             </div>
         </div>
         <div class="center ie-boxsand w-full flex justify-center items-center">
-            <img class="sandclock sananimate" src="/public/img/sandclock.svg" alt="">
+            <img class="sandclock sananimate" src="/img/sandclock.svg" alt="">
             <div class="flex text-xl absolute ie-mt-30">
                 <span class="loading loadinganimate">L</span>
                 <span class="loading loadinganimate">o</span>
