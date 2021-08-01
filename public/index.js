@@ -46,13 +46,13 @@ setInterval(() => {
 var y = 1;
 setInterval(() => {
   $(".profile").attr("src", `img/uac/${y}.bmp`);
-  let user = ["Poom", "Neng", "Fang", "Phufah", "Fahfilly", "Boss", "Thun", "Pol", "Jean", "Jeng", "Mind", "Puifai", "Wave", "Hydra", "Admin", "Stupid", "Hackathon", "Thailand", "sth5", "User", "account1", "Shabu", "rainbow"]
+  let user = ["Poom", "Neng", "Fang", "Phufah", "Fahfilly", "Boss", "Thun", "Pol", "Jean", "Jeng", "Mind", "Puifai", "Wave", "Hydra", "Admin", "Stupid", "Hackathon", "Thailand", "sth5", "User", "account1", "Shabu", "ง่วง"]
   $(".profile-name").html(user[y-1]);
   if (y == 23) {
     y = 1;
   }
   y++;
-}, 200);
+}, 500);
 
 // select and highlight desktop icon
 $(".win-icon").click((e) => {
@@ -64,6 +64,18 @@ $(".win-icon").click((e) => {
     }
   })
 })
+
+var lo = 5;
+var ls = ["กำลังค้นหา", "กำลังค้นหา.", "กำลังค้นหา..", "กำลังค้นหา...", "กำลังค้นหา....", "กำลังค้นหา...."]
+setInterval(() => {
+  $(".start-items-text").each((id, el) => {
+    $(el).html(ls[lo]);
+    lo--;
+    if (lo == -1) {
+      lo = 5
+    }
+  })
+}, 300)
 
 // open e-preaw
 // open_E_Preaw = () => {

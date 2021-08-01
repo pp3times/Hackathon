@@ -214,6 +214,7 @@ button.ok {
   color: white;
   margin-left: 10px;
   font-size: 2em;
+  /* font-family: 'Times new roman'; */
 }
 .start-menu-content {
   height: 300px;
@@ -226,7 +227,7 @@ button.ok {
   align-items: center;
   margin-bottom: 10px;
   width: 200px;
-  background-color: wheat;
+  /* background-color: wheat; */
 }
 .start-items:hover {
   background-color: black;
@@ -234,7 +235,12 @@ button.ok {
 .start-items-pict {
   height: 40px;
   width: 40px;
-  background-color: black;
+  animation: spin 2s linear infinite;
+  /* background-color: black; */
+}
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
 }
 .start-items-text {
   margin-left: 10px;
