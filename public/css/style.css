@@ -41,11 +41,14 @@ body {
   background: linear-gradient(180deg, rgba(65,140,233,1) 0%, rgba(19,105,211,1) 100%);
 }
 
-.log:hover {
-  background-color: black;
+.log:hover{
+  background-color: rgba(0, 0, 0, 20%);
+  cursor: pointer;
+  transition: .3s;
 }
-/* .textturn {
-  color: white;
-  font-size: smaller;
-} */
+
+.animatee{
+  transform: translateX(0.05rem) translateY(0.05rem);
+}
+
 

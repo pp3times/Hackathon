@@ -10,29 +10,108 @@
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" async></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous" async></script>
+  <style>
+    .px-1{
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
+    .px-2{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    .rounded-sm{
+      border-radius: 0.25rem;
+    }
+    .border-blue-600{
+      --tw-border-opacity: 1;
+      border-color: rgba(37, 99, 235, var(--tw-border-opacity));
+    }
+      flex{
+      display: flex;
+    }
+    .justify-center{
+      justify-content: center;
+    }
+    .justify-end{
+      justify-content: end;
+    }
+  @keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to { 
+        transform: rotate(360deg);
+    }
+  }
+  
+  @-webkit-keyframes rotate {
+      from {
+          -webkit-transform: rotate(0deg);
+      }
+      to { 
+          -webkit-transform: rotate(360deg);
+      }
+  }
+  .load {
+      width: 100px;
+      height: 100px;
+      margin: 110px auto 0;
+      border:solid 10px #8822aa;
+      border-radius: 50%;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      -webkit-transition: all 0.5s ease-in;
+      -webkit-animation-name:             rotate; 
+      -webkit-animation-duration:         1.0s; 
+      -webkit-animation-iteration-count:  infinite;
+      -webkit-animation-timing-function: linear;  
+      transition: all 0.5s ease-in;
+      animation-name:             rotate; 
+      animation-duration:         1.0s; 
+      animation-iteration-count:  infinite;
+      animation-timing-function: linear; 
+    }
+  </style>
 </head>
 
 <body>
   <div class="window border-blue-600">
-    <div class="topbt">
-
+    <div class="topbt px-1 flex items-center">
+        <img class="h-9 rounded-sm" style="border: 2px solid #BCCAE0;" src="https://cdn.discordapp.com/attachments/802095895331733544/871284006082183188/unknown.png" alt="">
+        <p class="text-sm px-2 text-white flex items-center">KC</p>
     </div>
-    <div class="content" id="test">
+    <div class="content flex justify-center items-center" id="test">
+      <div class="load absolute" style="margin-bottom: 7rem;"></div>
+      <p class="text-sm flex items-center">loading..</p>
     </div>
-    <div class="bottom flex text-xs text-white justify-end">
+    <div class="bottom flex text-xs text-white justify-end pt-0.5">
       <!--bottom-->
-      <div class="log items-center flex justify-end">
-        <img class="w-4 h-4"
+      <div class="log animatee items-center flex justify-end px-1 mr-1" onmousedown="logo1()" onmouseup="logo1re()">
+        <img class="w-4 h-4" id="ani1" 
           src="https://cdn.discordapp.com/attachments/802095895331733544/871146366485815336/unknown.png" alt="">
         <p class="items-center flex ml-1">Log off</p>
       </div>
-      <div class="shut_bt ml-2 mr-2 my-1 flex">
-        <img class="w-4 h-4"
+      <div class="log animatee hut_bt flex items-center px-1" onmousedown="logo2()" onmouseup="logo2re()">
+        <img class="w-4 h-4" id="ani2"
           src="https://cdn.discordapp.com/attachments/802095895331733544/871142593218609152/unknown.png" alt="">
-        <p class="ml-1">Turn off Computer</p>
+        <p class="ml-1 flex items-center">Turn off Computer</p>
       </div>
     </div>
   </div>
+  <script>
+    function logo1(){
+            document.getElementById("ani1").classList.add("animatee");
+        }
+    function logo1re(){
+            document.getElementById("ani1").classList.remove("animatee")
+        }
+    function logo2(){
+            document.getElementById("ani2").classList.add("animatee");
+        }
+    function logo2re(){
+            document.getElementById("ani2").classList.remove("animatee")
+        }
+  </script>
 </body>
 <script type="text/javascript">
   var x = 0;
@@ -43,6 +122,13 @@
     }
     x++;
   }, .01)
+
+  var name = document.querySelector('.log');
+  var sound = new Audio('https://www.myinstants.com/media/sounds/erro.mp3');
+  name.addEventlistener('click', function() {
+    sound.play();
+  });
 </script>
+
 
 </html>
