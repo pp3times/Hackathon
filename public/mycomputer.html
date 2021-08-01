@@ -9,16 +9,36 @@
   <link rel="stylesheet" href="css/tailwind.css" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    *{
+    .all-elements-pf{
       user-select: none;
+      cursor: pointer;
     }
+    .all-elements-pf:hover{
+      /* transform:rotate(360deg); */
+      /* transition: all linear 2s infinite; */
+      animation: rotate .5s ease-in forwards;
+    }
+    @keyframes rotate{
+      0%{
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+      50%{
+        transform: rotate(30deg);
+      }
+      100%{
+        opacity: 0;
+        transform: rotate(-10deg);
+      }
+    }
+  
     .text-xxs {
       font-size: 0.65rem;
     }
     .my-computer-div {
       width: 100vw;
       height: 100vh;
-      background-color: #435AD6;
+      background-color: #EDEAD6;
       /* border: 2px solid #0831D9; */
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
@@ -61,7 +81,24 @@
       background-color: #EDEAD6;
       border-bottom: 1px solid #D5D1BD;
     }
-
+    .address-mycomputer{
+      width: 97%;
+    }
+    .dropdown-img{
+      width: 14px;
+      height: 15px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(../public/img/dropdown.png);
+    }
+    .next-path{
+      width: 20px;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(../public/img/gopath.png);
+      background-color: #EDEAD6;
+    }
     .function-icon-bar-back,
     .function-icon-bar-next,
     .function-icon-bar-up,
@@ -72,6 +109,14 @@
       background-repeat: no-repeat;
       width: 22px;
       height: 22px;
+    }
+    .function-icon-bar-back:hover,
+    .function-icon-bar-next:hover,
+    .function-icon-bar-up:hover,
+    .function-icon-bar-search:hover,
+    .function-icon-bar-folders:hover,
+    .function-icon-bar-app:hover {
+      border: 1px solid black;
     }
 
     .function-icon-bar-back {
@@ -160,7 +205,8 @@
     }
 
     .system-icon-view-info,
-    .system-pullup {
+    .system-pullup,
+    .system-icon-medium {
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -206,9 +252,8 @@
       width: 16px;
       height: 16px;
     }
-
-    .system-icon- {
-      background-image: url(../public/img/change.png);
+    .system-icon-medium{
+      background-image: url(../public/img/hackathon.png);
       width: 16px;
       height: 16px;
     }
@@ -218,68 +263,45 @@
     }
 
     /* right icon */
-    .right-icon {
-      background-image: url(../public/img/file.jpg);
-      width: 60px;
-      height: 60px;
+    .right-icon,
+    .right-icon-dvd1,
+    .right-icon-dvd2,
+    .right-icon-github,
+    .right-icon-contributors{
+      width: 50px;
+      height: 50px;
       background-size: contain;
       background-repeat: no-repeat;
+    }
+    .right-icon {
+      background-image: url(../public/img/file.jpg);
     }
 
     .right-icon-dvd1 {
       background-image: url(../public/img/DVD1.jpg);
-      width: 60px;
-      height: 60px;
-      background-size: contain;
-      background-repeat: no-repeat;
     }
 
     .right-icon-dvd2 {
       background-image: url(../public/img/DVD2.jpg);
-      width: 60px;
-      height: 60px;
-      background-size: contain;
-      background-repeat: no-repeat;
     }
 
     .right-icon-github {
       background-image: url(../public/img/github.jpg);
-      width: 60px;
-      height: 60px;
-      background-size: contain;
-      background-repeat: no-repeat;
     }
 
     .right-icon-contributors {
       background-image: url(../public/img/contributors.png);
-      width: 60px;
-      height: 60px;
-      background-size: contain;
-      background-repeat: no-repeat;
     }
     /* right layer */
-    .right-layer1 {
-      width: 100%;
-      height: 230px;
-    }
-    .right-layer2 {
-      width: 100%;
-      height: 120px;
-    }
-    .right-layer3 {
-      width: 100%;
-      height: 130px;
-    }
-    .right-layer4 {
-      width: 100%;
-      height: 100%;
-    }
     .cl-purple{
       color: rgb(32, 32, 90);
     }
     .cl-purple:hover{
       color: rgb(43, 114, 255);
       text-decoration: underline;
+    }
+    .btn-bg-blue:hover{
+      background-color:red;
     }
   </style>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -304,56 +326,64 @@
     </div>
     <div class="option-mycomputer flex justify-between w-full">
       <div class="flex p-px">
-        <p class="text-xs t-option w-10 text-center">File</p>
-        <p class="text-xs t-option w-10 text-center">Edit</p>
-        <p class="text-xs t-option w-10 text-center">View</p>
-        <p class="text-xs t-option w-3/12 text-center">Favorites</p>
-        <p class="text-xs t-option w-10 text-center">Tools</p>
-        <p class="text-xs t-option w-10 text-center">Help</p>
+        <p class="text-xs t-option w-10 text-center all-elements-pf">File</p>
+        <p class="text-xs t-option w-10 text-center all-elements-pf">Edit</p>
+        <p class="text-xs t-option w-10 text-center all-elements-pf">View</p>
+        <p class="text-xs t-option w-3/12 text-center all-elements-pf">Favorites</p>
+        <p class="text-xs t-option w-10 text-center all-elements-pf">Tools</p>
+        <p class="text-xs t-option w-10 text-center all-elements-pf">Help</p>
       </div>
 
       <div class="window-mycomputer pumm"></div>
     </div>
     <div class="function-bar-mycomputer flex w-full h-10 items-center">
-      <div class="function-icon-bar-back ml-2"></div>
-      <p class="ml-1 text-xs">Back</p>
-      <div class="function-icon-bar-triangle ml-2 mr-1"></div>
-      <div class="function-icon-bar-next mt-1"></div>
-      <div class="function-icon-bar-triangle ml-2 mr-1"></div>
-      <div class="function-icon-bar-up mr-1"></div>
+      <div class="function-icon-bar-back ml-2 all-elements-pf"></div>
+      <p class="ml-1 text-xs all-elements-pf">Back</p>
+      <div class="function-icon-bar-triangle ml-2 mr-1 all-elements-pf"></div>
+      <div class="function-icon-bar-next mt-1 all-elements-pf"></div>
+      <div class="function-icon-bar-triangle ml-2 mr-1 all-elements-pf"></div>
+      <div class="function-icon-bar-up mr-1 all-elements-pf"></div>
       <div class="border h-8 mr-2" style="border-left: 1px solid #BDBDB5;"></div>
-      <div class="function-icon-bar-search"></div>
-      <p class="ml-1 mr-2 text-xs">Search</p>
-      <div class="function-icon-bar-folders"></div>
-      <p class="ml-1 mr-2 text-xs">Folders</p>
-      <div class="border h-8 mr-2" style="border-left: 1px solid #BDBDB5;"></div>
-      <div class="function-icon-bar-app"></div>
-      <div class="function-icon-bar-triangle ml-2 mr-1"></div>
+      <div class="function-icon-bar-search all-elements-pf"></div>
+      <p class="ml-1 mr-2 text-xs all-elements-pf">Search</p>
+      <div class="function-icon-bar-folders all-elements-pf"></div>
+      <p class="ml-1 mr-2 text-xs all-elements-pf">Folders</p>
+      <div class="border h-8 mr-2 " style="border-left: 1px solid #BDBDB5;"></div>
+      <div class="function-icon-bar-app all-elements-pf"></div>
+      <div class="function-icon-bar-triangle ml-2 mr-1 all-elements-pf"></div>
+    </div>
+    <!-- Address Path -->
+    <div class="address-mycomputer flex h-5">
+      <p class="text-xs ml-2" style="color:#80807d; ">Address</p>
+      <div class="white-box-input ml-1 w-full bg-white flex justify-between items-center">
+        <div class="flex">
+          <div class="mt-0.5 mycom-input"></div>
+          <p class="ml-1 text-xxs">My Computer</p>
+          </div>
+          <div class="dropdown-img all-elements-pf"></div>
+       </div>
+       <div class="address-right-mycomputer flex all-elements-pf">
+         <div class="next-path"></div>
+       </div>
+       <p class="flex items-center text-xs">Go</p>
+    </div>
 
-    </div>
-    <div class="address-mycomputer flex w-full h-5">
-      <p class="text-xs ml-2" style="color:#80807d;">Address</p>
-      <div class="white-box-input ml-1 w-full bg-white flex">
-        <div class="mt-0.5 mycom-input"></div>
-        <p class="ml-1 text-xxs">My Computer</p>
-      </div>
-    </div>
     <div class="body-mycomputer flex flex-row w-full h-full">
       <div class="sidebar-mycomputer w-42 h-full flex flex-col items-center">
         <div class="system-task mt-4 w-10/12 h-20">
-          <div class="system-task-topic w-full h-5 flex justify-between items-center">
-            <p style="color: rgb(32, 32, 90);font-weight: 600;" class="text-sm ml-2">System-Tasks</p>
-            <div class="system-pullup mr-1"></div>
+          <div class="system-task-topic w-full h-5 flex justify-between items-center ">
+            <p style="color: rgb(32, 32, 90);font-weight: 600;" class="text-sm ml-2 ">System-Tasks</p>
+            <div class="system-pullup mr-1 "></div>
           </div>
-          <div class="w-full h-full mt-1 ml-1">
-            <div class="system-icon-view-info ml-1 mb-0.5">
-              <p class="cl-purple text-xxs ml-5 w-20">System-Tasks</p>
+          <div class="w-full h-full mt-1 ml-1 ">
+            <div class="system-icon-view-info ml-1 mb-0.5 all-elements-pf">
+              <p class="cl-purple text-xxs ml-5 w-20 all-elements-pf">System-Tasks</p>
             </div>
-            <div class="system-icon-add-or ml-1 mb-0.5">
-              <p class="cl-purple text-xxs ml-5 w-48">Add or remove programs</p>
+            <div class="system-icon-add-or ml-1 mb-0.5 all-elements-pf">
+              <p class="cl-purple text-xxs ml-5 w-32 all-elements-pf">Add or remove programs</p>
             </div>
-            <div class="system-icon-change ml-1">
-              <p class="cl-purple text-xxs ml-5 w-48">Change a setting</p>
+            <div class="system-icon-change ml-1 all-elements-pf">
+              <p class="cl-purple text-xxs ml-5 w-24 all-elements-pf">Change a setting</p>
             </div>
           </div>
         </div>
@@ -363,17 +393,17 @@
             <div class="system-pullup mr-1"></div>
           </div>
           <div class="w-full h-full mt-1 ml-1">
-            <div class="system-icon-my-network ml-1 mb-0.5">
-              <p class="cl-purple text-xxs ml-5 w-48">My Network Places</p>
+            <div class="system-icon-my-network ml-1 mb-0.5 all-elements-pf">
+              <p class="cl-purple text-xxs ml-5 w-24 all-elements-pf">My Network Places</p>
             </div>
-            <div class="system-icon-my-doc ml-1 mb-0.5">
-              <p class="cl-purple text-xxs ml-5 w-48">My Documents</p>
+            <div class="system-icon-my-doc ml-1 mb-0.5 all-elements-pf">
+              <p class="cl-purple text-xxs ml-5 w-24 all-elements-pf">My Documents</p>
             </div>
-            <div class="system-icon-shared-doc ml-1 mb-0.5">
-              <p class="cl-purple text-xxs ml-5 w-48">Shared Documents</p>
+            <div class="system-icon-shared-doc ml-1 mb-0.5 all-elements-pf">
+              <p class="cl-purple text-xxs ml-5 w-24 all-elements-pf">Shared Documents</p>
             </div>
-            <div class="system-icon-change ml-1">
-              <p class="cl-purple text-xxs ml-5 w-48">Control Panel</p>
+            <div class="system-icon-change ml-1 all-elements-pf">
+              <p class="cl-purple text-xxs ml-5 w-24 all-elements-pf">Control Panel</p>
             </div>
           </div>
         </div>
@@ -382,48 +412,72 @@
             <p style="font-weight: 600;" class="cl-purple text-sm ml-2">Details</p>
             <div class="system-pullup mr-1"></div>
           </div>
-          <div class="w-full h-full mt-1 ">
-            <div class="system-icon-medium ml-1">
-              <p class="cl-purple text-xxs ml-5 w-20">System-Tasks</p>
+          <div class="w-full h-full mt-1 flex">
+            <div class="system-icon-medium ml-2 mt-1 all-elements-pf">
             </div>
-            <div class="system-icon-blog ml-1">
+            <p class="cl-purple text-xxs ml-1 w-36 h-8 all-elements-pf">The 5th StuP1d H@CK THaIL@Nd</p>
+            <!-- <div class="system-icon-blog ml-1">
               <p class="cl-purple text-xxs ml-5 w-48">Add or remove programs</p>
-            </div>
-            <div class="system-icon-mine ml-1">
+            </div> -->
+            <!-- <div class="system-icon-mine ml-1">
               <p class="cl-purple text-xxs ml-5 w-48">Change a setting</p>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
       <!-- เริ่มขวา -->
       <div class="w-full h-full right-body">
         <!-- layer1 -->
-        <div class="right-layer1">
-            <p class="cl-purple mt-1 ml-4 w-30">File Stored on This computer</p>
-            <div class="right-icon mt-4 ml-5"></div>
-            <p class=" cl-purple ml-24 -mt-11 w-80">Share Doccuments</p>
-            <div class="right-icon mt-12 ml-5"></div>
-            <p class="cl-purple ml-24 -mt-11 w-80">User's Documents</p>
+        <div class="right-layer1 w-full text-xs mb-2">
+          <p class=" cl-purple w-80 font-bold ml-4">File Stored on This computer</p>
+          <div style="width: 15.3rem; height: 0.05rem; background: linear-gradient(to right, rgba(153,209,255,1) 0%, rgba(255,255,255,1) 100%);"></div>
+          <div class="flex mt-4 ml-4">
+            <div class="btn-bg-blue flex items-center all-elements-pf">
+              <div class="right-icon "></div>
+              <p class="cl-purple w-30 ml-2">Share Doccuments </p>
+            </div>
+            <div class=" btn-bg-blue flex items-center ml-6 all-elements-pf">
+              <div class="right-icon"></div>
+              <p class="cl-purple w-80 ml-2">User's Documents</p>
+            </div>
+
+          </div>
         </div>
         <!-- layer2 -->
-        <div class="right-layer2 flex">
-          <p class="cl-purple ml-4 w-30 mt-1">Hard Disk Drives</p>
-          <div class="right-icon-dvd1 -ml-28 mt-12"></div>
-          <p class="cl-purple mt-16 ml-6 w-80">Local Disk (C:)</p>
+        <div class="right-layer2 w-full flex flex-col ">
+          <div class="about-me-topic w-full flex items-center cl-purple text-xs font-bold ml-4">Hard Disk Drives</div>
+          <div style="width: 15.3rem; height: 0.05rem; background: linear-gradient(to right, rgba(153,209,255,1) 0%, rgba(255,255,255,1) 100%);"></div>
+          <div class="btn-bg-blue flex items-center w-48 h-4/6 ml-4 mt-2 all-elements-pf">
+            <div class="right-icon-dvd1"></div>
+            <p class="cl-purple w-30 ml-4 text-xs ">Local Disk (C:)</p>
+          </div>
         </div>
         <!-- layer3 -->
-        <div class="right-layer3 flex">
-          <p class="cl-purple ml-4 w-30 mt-1">Devices with Removeable Storage</p>
-          <div class="right-icon-dvd2 mt-12 -ml-56"></div>
-          <p class="cl-purple mt-16 ml-6 w-30">CD Drive (D:)</p>
+        <div class="right-layer3 w-full flex flex-col mt-2">
+          <div class="about-me-topic w-full flex items-center cl-purple text-xs font-bold ml-4">Devices with Removeable Storage</div>
+          <div style="width: 15.3rem; height: 0.1rem; background: linear-gradient(to right, rgba(153,209,255,1) 0%, rgba(255,255,255,1) 100%);"></div>
+          <div class="btn-bg-blue flex items-center w-48 h-4/6 ml-4 mt-4 all-elements-pf">
+            <div class="right-icon-dvd2"></div>
+            <p class="cl-purple ml-4 w-30 text-xs">CD Drive (D:)</p>
+            
+          </div>
         </div>
         <!-- layer4 -->
-        <div class="right-layer4 flex">
-          <p class="cl-purple w-30 ml-4">About Me :)</p>
-          <div class="right-icon-github mt-12 -ml-16"></div>
-          <p class="cl-purple w-30 ml-4 mt-16">Github</p>
-          <div class="right-icon-contributors mt-36 -ml-32"></div>
-          <p class="cl-purple w-30 mt-40 ml-6">Contributors</p>
+        <div class="right-layer4 w-full flex flex-col mt-4">
+          <div class="about-me-topic w-full flex items-center cl-purple text-xs font-bold ml-4">About Me :)</div>
+          <div style="width: 15.3rem; height: 0.056rem; background: linear-gradient(to right, rgba(153,209,255,1) 0%, rgba(255,255,255,1) 100%);"></div>
+          
+          <div class="about-me-icon flex flex-row items-center mt-4 ml-4">
+            <div class="btn-bg-blue flex items-center w-36 h-full p-1">
+              <div class="right-icon-github "></div>
+              <p class="cl-purple w-30 ml-4 text-xs">Github</p>
+            </div>
+            <div class="btn-bg-blue flex items-center ml-4 w-44 h-full p-1">
+              <div class="right-icon-contributors"></div>
+              <p class="cl-purple w-30 ml-4 text-xs">Contributors</p>
+            
+            </div>
+          </div>
         </div>
       </div>
 
@@ -473,6 +527,9 @@
   </footer> -->
     <script>
       // make start button can't drag
+      $(".all-elements-pf").click(function(){
+        alert("Something went wrong");
+      })
       $(".start-btn").attr('draggable', false);
       // close start menu
       $(window).click((e) => {
