@@ -105,39 +105,17 @@
             ]
         ];
 
-		$loo = [
-			"ลึงมูไล่มู่เหลือกสู่หลิดุ",
-			"ลึงมูหล่าอยู่เลอะยุไลอูหลัดสู่",
-			"เหลิกลุลำทูลัวตูเลือนหมูเหลิดกู่ลามูหลากจุล่องซุ",
-			"ลวยคูไลรูไลอูหลัดสู"
-		];
-
 		$use = [];
 		$text = "";
 
 		for ($i=0; $i < $length; $i++) {
-			switch ($type) {
-				case 'teen':
-					do {
-						$random = rand(0,count($kumda[$level])-1);
-					} while(in_array($random, $use));
-					$use[] = $random;
-					$text = $text . str_replace("{{name}}", $name, censor($kumda[$level][$random])) . " ";
-					$text = str_replace("{{", "", $text);
-					$text = str_replace("}}", "", $text);
-					break;
-				
-				case 'loo':
-					if($i > count($loo)-1) {
-						break;
-					}
-					do {
-						$random = rand(0, count($loo)-1);
-					} while(in_array($random, $use));
-					$use[] = $random;
-					$text = $text . str_replace("{{name}}", $name, $loo[$random]) . " ";
-					break;
-			}
+			do {
+				$random = rand(0,count($kumda[$level])-1);
+			} while(in_array($random, $use));
+			$use[] = $random;
+			$text = $text . str_replace("{{name}}", $name, censor($kumda[$level][$random])) . " ";
+			$text = str_replace("{{", "", $text);
+			$text = str_replace("}}", "", $text);
 		}
 		
 		$text = mb_substr($text, 0, -1);
