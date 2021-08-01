@@ -191,6 +191,7 @@ button.ok {
   width: 100%;
   background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet,red);
   background-repeat:repeat-x;
+  box-shadow: 0 5px 2px -5px #333;
   animation:go 5s linear infinite;
 }
 @keyframes go{
@@ -248,6 +249,7 @@ button.ok {
   background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet,red);
   background-repeat:repeat-x;
   animation:gobackward 5s linear infinite;
+  box-shadow: 0 -5px 2px -5px #333;
 }
 .power {
   display: flex;

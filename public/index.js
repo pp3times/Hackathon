@@ -46,7 +46,7 @@ setInterval(() => {
 var y = 1;
 setInterval(() => {
   $(".profile").attr("src", `img/uac/${y}.bmp`);
-  let user = ["Poom", "Neng", "Fang", "Phufah", "Fahfilly", "Boss", "Thun", "Pol", "Jean", "Jeng", "Mind", "Puifai", "Wave", "Hydra", "Admin", "Stupid", "Hackathon", "Thailand", "sth5", "User", "", "", ""]
+  let user = ["Poom", "Neng", "Fang", "Phufah", "Fahfilly", "Boss", "Thun", "Pol", "Jean", "Jeng", "Mind", "Puifai", "Wave", "Hydra", "Admin", "Stupid", "Hackathon", "Thailand", "sth5", "User", "account1", "Shabu", "rainbow"]
   $(".profile-name").html(user[y-1]);
   if (y == 23) {
     y = 1;
