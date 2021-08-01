@@ -20,24 +20,24 @@
 
 <body>
     <div class="w-20 h-auto top-8 left-8 absolute text-center text-white">
-      <!-- <div class="window" id="e-preaw">
-        <div class="headbg"></div>
-        <header class="windowTitle">
-          <div class="windowTitleText">อีเปรี้ยว</div>
-          <div class="menubar">
-            <button class="headbtn minimize"></button>
-            <button class="headbtn close" onclick="epreawCloseWindow()"></button>
-          </div>
-        </header>
-        <div class="windowContent">
-          <div class="e-preaw" style="background-color: #008000; display: flex;">
-            <div class="holy">
-              <textarea id="text">หิวข้าวไหม</textarea>
-              <button onclick=speak()>Speak</button>
+        <div class="window" id="e-preaw">
+            <div class="headbg"></div>
+            <header class="windowTitle">
+                <div class="windowTitleText">อีเปรี้ยว</div>
+                <div class="menubar">
+                    <button class="headbtn minimize"></button>
+                    <button class="headbtn close" onclick="epreawCloseWindow()"></button>
+                </div>
+            </header>
+            <div class="windowContent">
+                <div class="e-preaw" style="background-color: #008000; display: flex;">
+                    <div class="holy">
+                        <textarea id="text">หิวข้าวไหม</textarea>
+                        <button onclick=speak()>Speak</button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div> -->
         <div class="mb-6 win-icon mycom">
             <img class="icon w-8 mb-2 h-8 center-x"
                 src="data:image/png;base64,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"
@@ -54,10 +54,260 @@
                 alt="ie" />
             <div class="text-xs">สำรวจอินเทอร์เน็ต</div>
         </div>
-
     </div>
 
     <main>
+        <!-- <div class="box">
+            <div class="inline-box">
+                <div class="title">
+                    <p>title</p>
+                    <div class="group-title" onclick="pageTarget(0)">
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="16" height="14" fill="white" />
+                            <rect width="16" height="14" fill="black" />
+                            <rect width="15" height="13" fill="white" />
+                            <rect x="1" y="1" width="14" height="12" fill="#BFBFBF" />
+                            <rect x="1" y="1" width="13" height="11" fill="#DBDBDB" />
+                            <rect x="2" y="2" width="12" height="10" fill="#BFBFBF" />
+                            <g filter="url(#filter0_iiii)">
+                                <rect width="16" height="14" fill="#BFBFBF" />
+                            </g>
+                            <rect x="4" y="9" width="6" height="2" fill="black" />
+                            <defs>
+                                <filter id="filter0_iiii" x="0" y="0" width="16" height="14"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="2" dy="2" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix"
+                                        values="0 0 0 0 0.858824 0 0 0 0 0.858824 0 0 0 0 0.858824 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="-2" dy="-2" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix"
+                                        values="0 0 0 0 0.501961 0 0 0 0 0.501961 0 0 0 0 0.501961 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="effect1_innerShadow" result="effect2_innerShadow" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="1" dy="1" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="effect2_innerShadow" result="effect3_innerShadow" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="-1" dy="-1" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="effect3_innerShadow" result="effect4_innerShadow" />
+                                </filter>
+                            </defs>
+                        </svg>
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="16" height="14" fill="white" />
+                            <rect width="16" height="14" fill="black" />
+                            <rect width="15" height="13" fill="white" />
+                            <rect x="1" y="1" width="14" height="12" fill="#BFBFBF" />
+                            <rect x="1" y="1" width="13" height="11" fill="#DBDBDB" />
+                            <rect x="2" y="2" width="12" height="10" fill="#BFBFBF" />
+                            <g filter="url(#filter0_iiii)">
+                                <rect width="16" height="14" fill="#BFBFBF" />
+                            </g>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2H3V11H12V2ZM11 4H4V10H11V4Z"
+                                fill="black" />
+                            <defs>
+                                <filter id="filter0_iiii" x="0" y="0" width="16" height="14"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="2" dy="2" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix"
+                                        values="0 0 0 0 0.858824 0 0 0 0 0.858824 0 0 0 0 0.858824 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="-2" dy="-2" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix"
+                                        values="0 0 0 0 0.501961 0 0 0 0 0.501961 0 0 0 0 0.501961 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="effect1_innerShadow" result="effect2_innerShadow" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="1" dy="1" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="effect2_innerShadow" result="effect3_innerShadow" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="-1" dy="-1" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="effect3_innerShadow" result="effect4_innerShadow" />
+                                </filter>
+                            </defs>
+                        </svg>
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="16" height="14" fill="white" />
+                            <rect width="16" height="14" fill="black" />
+                            <rect width="15" height="13" fill="white" />
+                            <rect x="1" y="1" width="14" height="12" fill="#BFBFBF" />
+                            <rect x="1" y="1" width="13" height="11" fill="#DBDBDB" />
+                            <rect x="2" y="2" width="12" height="10" fill="#BFBFBF" />
+                            <g filter="url(#filter0_iiii)">
+                                <rect width="16" height="14" fill="#BFBFBF" />
+                            </g>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4 3H6V4H7V5H9V4H10V3H12V4H11V5H10V6H9V7H10V8H11V9H12V10H10V9H9V8H7V9H6V10H4V9H5V8H6V7H7V6H6V5H5V4H4V3Z"
+                                fill="black" />
+                            <defs>
+                                <filter id="filter0_iiii" x="0" y="0" width="16" height="14"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="2" dy="2" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix"
+                                        values="0 0 0 0 0.858824 0 0 0 0 0.858824 0 0 0 0 0.858824 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="-2" dy="-2" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix"
+                                        values="0 0 0 0 0.501961 0 0 0 0 0.501961 0 0 0 0 0.501961 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="effect1_innerShadow" result="effect2_innerShadow" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="1" dy="1" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="effect2_innerShadow" result="effect3_innerShadow" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="-1" dy="-1" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="effect3_innerShadow" result="effect4_innerShadow" />
+                                </filter>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <nav class="navbar">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)"><span>F</span>ile</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><span>E</span>dit</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><span>V</span>iew</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><span>H</span>elp</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div id="content">
+                    <div class="text-head wtf">อีเปรี้ยวอะ</div>
+
+                    <a href="javascript:void(0)" class="btn-toggle-sence">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 5V6.66667M20 33.3333V35M35 20H33.3333M6.66667 20H5M30.6066 30.6066L29.4281 29.4281M10.5719 10.5719L9.3934 9.3934M30.6067 9.39349L29.4282 10.572M10.572 29.4282L9.39349 30.6067M26.6667 20C26.6667 23.6819 23.6819 26.6667 20 26.6667C16.3181 26.6667 13.3333 23.6819 13.3333 20C13.3333 16.3181 16.3181 13.3333 20 13.3333C23.6819 13.3333 26.6667 16.3181 26.6667 20Z"
+                                stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+
+
+
+
+                    <div class="main-box">
+                        <form action="">
+                            <label class="form-label wtf">คำข้อง</label>
+                            <textarea name="" id="" class="form-control"></textarea>
+
+                            <label class="form-label wtf" style="margin-top: .5rem;">ถึงใคร</label>
+                            <input type="text" name="" id="" class="form-control" style="height: 2rem;"></input>
+
+                            <div class="group-form">
+                                <div class="group-check">
+                                    <div class="form-check mt-1">
+                                        <input type="checkbox" value="" id="example1">
+                                        <label for="example1" class="wtf">
+                                            ศัพท์วัยรุ่น
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" value="" id="example2">
+                                        <label for="example2" class="wtf">
+                                            ศัพท์กระเทย
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" value="" id="example3">
+                                        <label for="example3" class="wtf">
+                                            ภาษาลู
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="group-check mt-1">
+                                    <label class="wtf">ระดับแร๊ง</label>
+                                    <div class="field-row" style="width: 200px">
+                                        <label for="range26" class="wtf">Low</label>
+                                        <input id="range26" type="range" min="1" max="5" value="3" />
+                                        <label class="wtf">High</label>
+                                    </div>
+                                    <div class="field-row mt-2">
+                                        <label for="text21" class="wtf">ความยาว</label>
+                                        <select name="">
+                                            <option value="">1 - สั้น</option>
+                                            <option value="" selected>2 - กลาง</option>
+                                            <option value="">3 - ยาว</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="mt-3 wtf" style="float:right;">จัดด่า</button>
+                            <button type="reset" class="mt-3 wtf"
+                                style="float:right;margin-right: 1rem;">รีเซ็ต</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $('.btn-toggle-sence').on('click', function () {
+                if ($(this).attr('data-click-state') == 1) {
+                    $(this).attr('data-click-state', 0);
+                    $('.wtf').css("color", "black");
+                    $('.inline-box').css('background-color', '#BFBFBF')
+                }
+                else {
+                    $(this).attr('data-click-state', 1);
+                    let back = ["blue", "red", "green", "orange"];
+                    let rand = back[Math.floor(Math.random() * back.length)];
+                    $('.wtf').css("color", "white");
+                    $('.inline-box').css("background-color", rand);
+                }
+            })
+        </script> -->
 
     </main>
 
@@ -65,6 +315,9 @@
         function pageTarget(val) {
             if (val == 1) {
                 $("main").load("components/main.txt");
+            }
+            else {
+                $("main").load('components/blank.txt');
             }
         }
     </script>
@@ -89,4 +342,5 @@
 
 <script src="index.js"></script>
 <script src="speak.js"></script>
+
 </html>
