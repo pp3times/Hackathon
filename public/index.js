@@ -34,7 +34,7 @@ setInterval(() => {
 
 var x = 0;
 setInterval(() => {
-  $(".time").css("color", `hsl(${x}, ${100}%, ${50}%)`);
+  $(".rainbow").css("color", `hsl(${x}, ${100}%, ${50}%)`);
   if (x >= 360) {
     x = 0;
   }
@@ -53,22 +53,22 @@ $(".win-icon").click((e) => {
 })
 
 // open e-preaw
-open_E_Preaw = () => {
-  $("#e-preaw").css("display", "flex");
-  var div = document.createElement('div');
-  let html1 = "";
-  for(let i=0; i<40; i++){
-    html1 += `<div style="height: 129px; width: 96px; left: ${i}%; position: absolute; bottom: ${i/30}%;" class="card nine"></div>`
-    $(() => $(".card").draggable());
-  }
-  for(let i=0; i<40; i++){
-    html1 += `<div style="height: 129px; width: 96px; top: ${i}%; position: absolute; right: ${i/30}%;;" class="card four"></div>`
-    $(() => $(".card").draggable());
-  }
-  document.getElementsByClassName("e-preaw")[0].innerHTML += html1;
-};
+// open_E_Preaw = () => {
+//   $("#e-preaw").css("display", "flex");
+//   var div = document.createElement('div');
+//   let html1 = "";
+//   for(let i=0; i<40; i++){
+//     html1 += `<div style="height: 129px; width: 96px; left: ${i}%; position: absolute; bottom: ${i/30}%;" class="card nine"></div>`
+//     $(() => $(".card").draggable());
+//   }
+//   for(let i=0; i<40; i++){
+//     html1 += `<div style="height: 129px; width: 96px; top: ${i}%; position: absolute; right: ${i/30}%;;" class="card four"></div>`
+//     $(() => $(".card").draggable());
+//   }
+//   document.getElementsByClassName("e-preaw")[0].innerHTML += html1;
+// };
 
 // drag epreaw
-$("#e-preaw").draggable({handle:".windowTitle"});
+// $("#e-preaw").draggable({handle:".windowTitle"});
 
-epreawCloseWindow = () => $("#e-preaw").css("display", "none");
+// epreawCloseWindow = () => $("#e-preaw").css("display", "none");

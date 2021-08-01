@@ -1,0 +1,18 @@
+.start-menu-win {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    user-select: none;
+    pointer-events: none;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    /* box-shadow: rgb(0 0 0 / 50%) 2px 4px 2px;
+    bottom: 100%; */
+}
+
+.start-menu-win.active-menu {
+    opacity: 1;
+}
