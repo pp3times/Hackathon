@@ -18,7 +18,7 @@
 		return implode("", $text);
 	}
 
-	function generate(string $name, string $type, string $level, int $length) {
+	function generate(string $name, string $level, int $length) {
 		$kumda = [
 			"low" => [
 				"{{name}}ไอ้{{2}}ไอ้คน{{3}}",
@@ -124,20 +124,16 @@
 
 	header('Content-Type: application/json');
 
-	if(!isset($_GET['name']) || !isset($_GET['type']) || !isset($_GET['level']) || !isset($_GET['length']) || !is_numeric($_GET['length'])) {
+	if(!isset($_GET['name']) || !isset($_GET['level']) || !isset($_GET['length']) || !is_numeric($_GET['length'])) {
 		http_response_code(400);
 		die(json_encode("Bed Request"));
-	}
-	if(!in_array($_GET['type'], ['teen', 'loo'])) {
-		http_response_code(400);
-		die(json_encode("Type not found"));
 	}
 	if(!in_array($_GET['level'], ['low', 'middle', 'high'])) {
 		http_response_code(400);
 		die(json_encode("Level not found"));
 	}
 
-	echo json_encode(generate($_GET['name'], $_GET['type'], $_GET['level'], $_GET['length']), JSON_UNESCAPED_UNICODE);
+	echo json_encode(generate($_GET['name'], $_GET['level'], $_GET['length']), JSON_UNESCAPED_UNICODE);
 ?>
 
 
