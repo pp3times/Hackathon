@@ -147,6 +147,7 @@
 
 .box .inline-box #content .main-box form textarea {
   resize: none;
+  background: yellow;
 }
 
 .box .inline-box #content .main-box form .form-control {
