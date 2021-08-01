@@ -322,7 +322,7 @@
                 var form = $(this);
 
                 $.ajax({
-                    url: "/public/source/gen.php",
+                    url: "e-preaw/public/source/gen.php",
                     type: "get",
                     dataType: "json",
                     data: form.serialize(),
