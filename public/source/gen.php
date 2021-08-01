@@ -20,7 +20,7 @@
 
 	function generate(string $name, string $level, int $length) {
 		$kumda = [
-			"low" => [
+			"1" => [
 				"{{name}}ไอ้{{2}}ไอ้คน{{3}}",
 				"ไอ{{name}}คน{{2}}",
 				"ไอ{{name}}{{2}}",
@@ -53,7 +53,7 @@
 				"คนอย่าง{{name}}{{9}}",
 				"ทำตัว{{2}} ระวังเพื่อน{{2}}นะ"
 			],
-			"middle" => [
+			"2" => [
                 "ไอ้{{name}}ไอ{{3}}",
                 "{{3}}ไอ{{name}}",
                 "อย่า{{3}}ไอ{{name}}",
@@ -85,7 +85,7 @@
                 "ไอ{{4}}",
                 "ไอ{{5}}"
 			],
-			"high" => [
+			"3" => [
                 "ไอ้{{name}}คน{{1}}{{name}}นี่แม่{{4}}ออกมาได้นะ{{2}}",
                 "ไอ้{{1}}{{name}}{{1}}แม่",
                 "ไอ้{{1}}{{name}}{{4}}มาเกิด",
@@ -128,7 +128,7 @@
 		http_response_code(400);
 		die(json_encode("Bed Request"));
 	}
-	if(!in_array($_GET['level'], ['low', 'middle', 'high'])) {
+	if(!in_array($_GET['level'], ['1', '2', '3'])) {
 		http_response_code(400);
 		die(json_encode("Level not found"));
 	}
