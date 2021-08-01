@@ -7,10 +7,78 @@
     <title>e-preaw load</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tailwind.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loadinganimate{
+            animation: loading 2s infinite;
+        }
+        .loading:nth-child(1){
+            animation-delay: 0;
+        }
+        .loading:nth-child(2){
+            animation-delay: 0.2s;
+        }
+        .loading:nth-child(3){
+            animation-delay: 0.4s;
+        }
+        .loading:nth-child(4){
+            animation-delay: 0.6s;
+        }
+        .loading:nth-child(5){
+            animation-delay: 0.8s;
+        }
+        .loading:nth-child(6){
+            animation-delay: 1s;
+        }
+        .loading:nth-child(7){
+            animation-delay: 1.2s;
+        }
+        .loading:nth-child(8){
+            animation-delay: 1.4s;
+        }
+        .loading:nth-child(9){
+            animation-delay: 1.6s;
+        }
+        .loading:nth-child(10){
+            animation-delay: 1.8s;
+        }
+        @keyframes loading{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="absolute">
-        
+        <div class="w-full flex items-center justify-center">
+            <img src="/public/img/loadingepreaw.svg" alt="">
+        </div>
+        <div class="w-full flex items-center justify-center space-x-3">
+            <p class="text-white text-3xl">อีเปรี้ยว</p>
+            <div class="flex">
+                <p class="text-white text-3xl loadinganimate loading">L</p>
+                <p class="text-white text-3xl loadinganimate loading">o</p>
+                <p class="text-white text-3xl loadinganimate loading">a</p>
+                <p class="text-white text-3xl loadinganimate loading">d</p>
+                <p class="text-white text-3xl loadinganimate loading">i</p>
+                <p class="text-white text-3xl loadinganimate loading">n</p>
+                <p class="text-white text-3xl loadinganimate loading">g</p>
+                <p class="text-white text-3xl loadinganimate loading">.</p>
+                <p class="text-white text-3xl loadinganimate loading">.</p>
+                <p class="text-white text-3xl loadinganimate loading">.</p>
+            </div>
+        </div><br>
+        <div class="w-fu;; flex items-center justify-center">
+            <p class="text-white text-md">version windows 2000</p>
+        </div>
     </div>
 </body>
 </html>
