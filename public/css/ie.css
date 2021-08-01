@@ -1,9 +1,15 @@
-html,body{
+.ie-main{
     margin: 0;
     padding: 0;
     background-color: white;
     overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
+.ie-group {
+    cursor: pointer;
+}
+
 .ie-bar{
     background-color: #6885db;
 }
@@ -26,15 +32,15 @@ html,body{
 .border-left{
     border-left: 0.1px solid rgb(199, 194, 194);
 }
-.box{
+.ie-box{
     border: 1px solid transparent;
 }
-.box:hover{
+.ie-box:hover{
     border: 1px solid rgb(199, 194, 194);
     border-radius: 2px;
     transition: 0.4s;
 }
-.mt-1{
+.ie-mt-1{
     margin-top: 0.25rem;
 }
 .ml-1{
@@ -78,7 +84,8 @@ html,body{
 }
 .h-8{
     height: 2rem;
-}.h10{
+}
+.h10{
     height: 2.5rem;
 }
 .w-full{
@@ -147,7 +154,7 @@ html,body{
     height: 15rem;
     margin-top: 8rem;
 }
-.boxsand{
+.ie-boxsand{
     height: 60vh;
 }
 .sananimate{ 
@@ -159,7 +166,7 @@ html,body{
 .text-xl{
     font-size: 2rem;
 }
-.mt-30{
+.ie-mt-30{
     margin-top: 30rem;
 }
 .loading:nth-child(1){
