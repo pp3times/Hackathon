@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hackathon</title>
-    <link rel="stylesheet" href="css/tailwind.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="bg-blue-500 h-screen flex justify-center items-center">
-      <h1 class="text-10xl text-white">Coming soon</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hackathon</title>
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" async></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous" async></script>
+</head>
+
+<body>
+  <div class="window border-blue-600">
+    <div class="topbt">
+
     </div>
-  </body>
+    <div class="content" id="test">
+    </div>
+    <div class="bottom flex text-xs text-white justify-end">
+      <!--bottom-->
+      <div class="log items-center flex justify-end">
+        <img class="w-4 h-4"
+          src="https://cdn.discordapp.com/attachments/802095895331733544/871146366485815336/unknown.png" alt="">
+        <p class="items-center flex ml-1">Log off</p>
+      </div>
+      <div class="shut_bt ml-2 mr-2 my-1 flex">
+        <img class="w-4 h-4"
+          src="https://cdn.discordapp.com/attachments/802095895331733544/871142593218609152/unknown.png" alt="">
+        <p class="ml-1">Turn off Computer</p>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  var x = 0;
+  setInterval(() => {
+    $(".content").css("background-color", `hsl(${x}, ${100}%, ${50}%)`);
+    if (x >= 360) {
+      x = 0;
+    }
+    x++;
+  }, .01)
+</script>
+
 </html>
