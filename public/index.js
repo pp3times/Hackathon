@@ -35,11 +35,24 @@ setInterval(() => {
 var x = 0;
 setInterval(() => {
   $(".rainbow").css("color", `hsl(${x}, ${100}%, ${50}%)`);
+  $(".power").css("outline-color", `hsl(${x}, ${100}%, ${50}%)`);
+  $(".profile").css("border-color", `hsl(${x}, ${100}%, ${50}%)`);
   if (x >= 360) {
     x = 0;
   }
   x++;
 }, 10)
+
+var y = 1;
+setInterval(() => {
+  $(".profile").attr("src", `img/uac/${y}.bmp`);
+  
+  $(".profile-name").html("หิว");
+  if (y == 23) {
+    y = 1;
+  }
+  y++;
+}, 200);
 
 // select and highlight desktop icon
 $(".win-icon").click((e) => {
