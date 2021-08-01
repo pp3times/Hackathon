@@ -43,6 +43,7 @@ setInterval(() => {
   x++;
 }, 10)
 
+// start menu credits
 var y = 1;
 setInterval(() => {
   $(".profile").attr("src", `img/uac/${y}.bmp`);
