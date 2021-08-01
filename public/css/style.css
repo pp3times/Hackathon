@@ -103,7 +103,7 @@ button.ok {
   background-repeat: no-repeat;
 }
 .right-menu {
-  width: 130px;
+  width: 150px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
