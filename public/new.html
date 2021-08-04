@@ -9,6 +9,7 @@
     <!-- <link rel="stylesheet" href="css/style.css" /> -->
     <title>Document</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -17,6 +18,7 @@
 
         html,
         body {
+            font-family: 'Kanit', sans-serif;
             height: 100vh;
             width: 100%;
             overflow-x: hidden;
@@ -29,6 +31,7 @@
 
         .navbar {
             border-bottom: 1.5px solid rgb(225, 220, 220);
+            height: 4.5rem;
         }
         .merge-left{
             width: 30rem;
@@ -38,27 +41,42 @@
             width: 35rem;
             height: 35.5rem;
         }
+
         /* img */
-        .logoe-preaw{
-            background-size: contain;
+        .logo-preaw{
             background-image: url(../public/img/e-preawlogo-final.png);
-            width: 2rem;
-            height: 2rem;
-            margin-left: 44rem;
+            width: 3rem;
+            height: 3rem;
+            background-size: contain;
         }
+        .logo-sunlight{
+            background-image: url(../public/img/sun.png);
+            width: 1.5rem;
+            height: 1.5rem;
+            background-size: contain;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="page">
-        <div class="navbar w-full h-14 flex items-center">
-            <div class="logoe-preaw">
+        <!-- navbar -->
+            <div class="navbar w-full flex justify-center">
+                    <div class="nav-all w-3/5 flex justify-between">
+                        <div class="logo-box w-full flex items-center">
+                            <div class="logo-preaw bg-no-repeat"></div>
+                            <p class="ml-4 text-xl">อีเปรี้ยว</p>
+                        </div>
+                        <div class="flex items-center w-3/4 space-x-8 ml-16">
+                            <p class="text-gray-400">ช่วยเหลือ</p>
+                            <p class="text-gray-400">ซื้อกาแฟให้ฉัน</p>
+                            <p class="border-2 px-3 py-2 rounded border-red-500 text-red-500">API Coming Soon</p>
+                            <div class="logo-sunlight bg-no-repeat "></div>
+                        </div>
+                    </div>
             </div>
-            <p class="ml-2">อีเปรี้ยว</p>
-            <div class="navright">
-
-            </div>
-        </div>
+        <!-- body -->
         <div class="body-container w-full h-full">
             <div class="flex w-full mt-16 justify-center">
                 <div class="merge-left shadow-2xl bg-gray-700"></div>
