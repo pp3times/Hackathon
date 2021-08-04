@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .page {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .navbar {
+            border-bottom: 1.5px solid rgb(225, 220, 220);
+        }
+        .merge-left{
+            width: 30rem;
+            height: 35.5rem;
+        }
+        .merge-right{
+            width: 35rem;
+            height: 35.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="navbar w-full h-14">
+        </div>
+        <div class="body-container w-full h-full">
+            <div class="flex w-full mt-16 justify-center">
+                <div class="merge-left shadow-2xl bg-gray-700"></div>
+                <div class="merge-right shadow-2xl ml-16 bg-gray-700"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
