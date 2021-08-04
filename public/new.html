@@ -55,7 +55,32 @@
             height: 1.5rem;
             background-size: contain;
         }
-
+        .rudebox{
+            height: 31rem;
+            width: 100%;
+        }
+        .buttonrude{
+            width: 100%%;
+            height: 15%;
+        }
+        .buttoncopy{
+            width: 85%;
+            height: 5rem;
+            background-color: #DC2629;
+            border-radius: 4px;
+        }
+        .logoduplicate{
+            background-image: url(../public/img/duplicate.svg);
+        }
+        .vector{
+            background-image: url(../public/img/vector.png);
+        }
+        .buttonvolume{
+            height: 5rem;
+            width: 5rem;
+            background-color: #DC2629;
+            border-radius: 4px;
+        }
     </style>
 </head>
 
@@ -80,7 +105,17 @@
         <div class="body-container w-full h-full">
             <div class="flex w-full mt-16 justify-center">
                 <div class="merge-left shadow-2xl bg-gray-700"></div>
-                <div class="merge-right shadow-2xl ml-16 bg-gray-700"></div>
+                <div class="merge-right ml-16 ">
+                    <div class="w-full rudebox shadow-2xl"></div>
+                    <div class="buttonrude flex">
+                        <div class="buttoncopy flex items-center justify-center mt-3">
+                            <div class="logoduplicate bg-no-repeat w-8 h-8 bg-contain"></div>
+                        </div>
+                        <div class="buttonvolume mt-3 ml-2 flex items-center justify-center">
+                            <div class="vector w-9 h-9 bg-contain bg-no-repeat"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
