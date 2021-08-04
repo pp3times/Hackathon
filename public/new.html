@@ -33,6 +33,10 @@
             border-bottom: 1.5px solid rgb(225, 220, 220);
             height: 4.5rem;
         }
+        .api-coming-soon:hover{
+            background-color: #DC2629;
+            color: white;
+        }
         .merge-left{
             width: 30rem;
             height: 35.5rem;
@@ -133,7 +137,7 @@
                         <div class="flex items-center w-3/4 space-x-8 ml-16">
                             <p class="text-gray-400 w-20 cursor-pointer select-none">ช่วยเหลือ</p>
                             <p class="text-gray-400 w-28 cursor-pointer select-none">ซื้อกาแฟให้ฉัน</p>
-                            <p class="border-2 px-3 py-2 rounded border-red-500 text-red-500 w-40 cursor-pointer select-none">API Coming Soon</p>
+                            <p class="api-coming-soon border-2 px-3 py-2 rounded border-red-500 text-red-500 w-40 cursor-pointer select-none">API Coming Soon</p>
                             <div class="logo-sunlight bg-no-repeat cursor-pointer select-none"></div>
                         </div>
                     </div>
@@ -178,7 +182,7 @@
                     <div class="text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none">
                         <div class="flex items-center w-full justify-between select-none">
                             <p class="text-m font-semibold ml-4">สุภาพ</p>
-                            <input type="radio" class="mr-4 w-6 h-6" value=""/>
+                            <input type="radio" class="mr-4 w-6 h-6" name="select-input" value=""/>
                         </div>
                         <span class="ml-4 text-gray-400 text-sm">เป็นการด่าแบบผู้ดีใช้คำเหมาะสมบ้าง น่ารักบ้าง</span>
                     </div>
@@ -186,7 +190,7 @@
                     <div class="text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none">
                         <div class="flex items-center w-full justify-between">
                             <p class="text-m font-semibold ml-4">ปานกลาง</p>
-                            <input type="radio" class="mr-4 w-6 h-6" value=""/>
+                            <input type="radio" class="mr-4 w-6 h-6" name="select-input" value=""/>
                         </div>
                         <span class="ml-4 text-gray-400 text-sm">เป็นการด่าแบบผู้ดี ผสมหยาบทำให้ผู้ฟังและผู้อ่านเกิดการกระตุ้นอารมณ์</span>
                     </div>
@@ -197,7 +201,7 @@
                                 <p class="text-m font-semibold ml-4">แรงมาก</p>
                                 <div class="w-20 h-6 border rounded-xl bg-blue-200 ml-2 text-xs flex items-center justify-center font-medium text-white" style="background-color: #DC2629;">กำลังมาแรง !</div>
                             </div>
-                            <input type="radio" class="mr-4 w-6 h-6" value=""/>
+                            <input type="radio" class="mr-4 w-6 h-6" name="select-input" value=""/>
                         </div>
                         <span class="ml-4 text-gray-400 text-sm">หยาบแบบแรงไม่ไหวใครอ่านใครฟังก็ต้องจุก</span>
                     </div>
@@ -220,7 +224,6 @@
         </div>
 
     </div>
-
 
 </body>
 
