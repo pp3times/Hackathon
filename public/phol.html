@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,
+        body {
+            height: 150vh;
+            width: 100%;
+        }
+        .nav-border{
+            border-bottom: 1px solid rgb(190, 190, 190);
+        }
+        .button-border-red{
+            border: 2px solid red;
+            border-radius: 0.1rem;
+        }
+        .button-light{
+            border: 2px solid black;
+            border-radius: 0.1rem;
+        }
+        .slidex{
+            right: -20rem;
+            transition: 1s;
+        }
+        .radiobox{
+            border: 1px solid  rgb(212, 205, 205);
+            border-radius: 0.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="w-full h-full">
+        <!-- right-0 -->
+        <!-- <div id="sidebar" class="bg-blue-800 text-blue-100 w-64 space-y-6 px-2 right-0 py-7 absolute h-full slidex transform duration-1000">
+            <nav class="py-6 w-full">
+                <a class="block py-2.5 px-4 flex justify-center items-center rounded hover:bg-red-400 transition duration-400" href="">ช่วยเหลือ</a>
+                <a class="block py-2.5 px-4 flex justify-center items-center rounded hover:bg-red-400 transition duration-400" href="">ซื้อกาแฟให้ฉัน</a>
+                <a class="block py-2.5 px-4 flex justify-center items-center w-full button-border-red" href="">API Coming soon</a>
+            </nav>
+            <div class="absolute bottom-3 w-11/12 flex items-center justify-center button-light"><img src="https://cdn.discordapp.com/attachments/870731779462561852/872464188218441738/unknown.png" alt=""></div>
+        </div> -->
+        <div id="sidebar" class="w-full h-full hidden">
+            <div class="py-4 px-4 text-xl">
+                <img id="buttonx" class="absolute right-6 top-8 h-4" src="https://cdn.discordapp.com/attachments/870731779462561852/872489978561703936/35-356107_close-button-icon-png-clipart.png" alt="">
+                <nav class="py-6 w-full mt-10">
+                    <a class="block py-2.5 px-4 flex justify-center items-center rounded hover:bg-red-400 transition duration-400" href="">ช่วยเหลือ</a>
+                    <a class="block py-2.5 px-4 flex justify-center items-center rounded hover:bg-red-400 transition duration-400" href="">ซื้อกาแฟให้ฉัน</a>
+                    <a class="block py-2.5 px-4 flex justify-center items-center w-full button-border-red" href="">API Coming soon</a>
+                </nav>
+                <div class="absolute bottom-3 w-11/12 flex items-center justify-center button-light"><img src="https://cdn.discordapp.com/attachments/870731779462561852/872464188218441738/unknown.png" alt=""></div>
+            </div>
+        </div>
+        <header class="nav-border">
+        <nav class="container flex items-start px-2 md:mt-1 items-center">
+            <div class="py-1 flex items-center"><img class="h-16 ml-2 sm:ml-12" src="https://cdn.discordapp.com/attachments/870731779462561852/872436409926045726/e-preawlogo-final.png" alt="">
+                <p class="text-xl px-4">อีเปรี้ยว</p>
+            </div>
+            <ul class="hidden sm:flex flex-1 py-4 justify-end items-center gap-3 md:gap-12 text-bookmark-blue uppercase text-xs sm:text-base">
+                <li>ช่วยเหลือ</li>
+                <li>ซื้อกาแฟให้ฉัน</li>
+                <li>API coming soon</li>
+                <li><img class="h-6" src="https://cdn.discordapp.com/attachments/870731779462561852/872444004040572939/unknown.png" alt=""></li>
+            </ul>
+            <div id="button" class="button-border-red w-9 absolute right-4 flex sm:hidden" onclick="openn()">
+                <img class="h-8" src="https://cdn.discordapp.com/attachments/870731779462561852/872489091520921640/unknown.png" alt="">
+            </div>
+        </nav>
+        </header>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div class="w-full text-xs sm:text-md px-8 py-4">
+                <div class="px-4 py-0 sm:py-2 w-full">
+                    <div class="flex items-center px-4">
+                        <img class="h-3 px-1" src="https://cdn.discordapp.com/attachments/870731779462561852/872494029848346725/unknown.png" alt="">
+                        <p>ใส่ชื่อของคนที่จะด่า</p>
+                    </div>
+                    <div class="w-full md:w-10/12 px-3 mb-6 md:mb-0 py-0 sm:py-2">
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="name" type="text" placeholder="ชื่อ">
+                    </div>
+                </div>
+                <div class="px-4 w-full">
+                    <div class="flex items-center px-4">
+                        <img class="h-6" src="https://cdn.discordapp.com/attachments/870731779462561852/872496928556994630/unknown.png" alt="">
+                        <p>ใส่ความยาวของคำด่า(คำ)</p>
+                    </div>
+                    <div class="w-full md:w-10/12 px-3 mb-6 md:mb-0 py-0 sm:py-2">
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="word" type="text" placeholder="ความยาว">
+                    </div>
+                </div>
+                <div class="px-4 w-full">
+                    <div class="flex items-center px-4">
+                        <img class="h-6" src="https://cdn.discordapp.com/attachments/870731779462561852/872496928556994630/unknown.png" alt="">
+                        <p>ภาษาที่ต้องการใช้ในการด่า</p>
+                    </div>
+                    <div class="flex items-center mr-4 mb-2 pt-2 text-xs sm:text-sm">
+                        <input class="px-4 ml-1 sm:ml-5" type="checkbox" id="A3-yes" name="A3-confirmation" value="วัยรุ่น"/>
+                        <label for="A3-yes" class="select-none px-2">ภาษาวัยรุ่น</label>
+                        <input class="ml-1 sm:ml-5" type="checkbox" id="A3-yes" name="A3-confirmation" value="กะเทย"/>
+                        <label for="A3-yes" class="select-none px-2">ภาษากะเทย</label>
+                        <input class="ml-1 sm:ml-5" type="checkbox" id="A3-yes" name="A3-confirmation" value="ลู"/>
+                        <label for="A3-yes" class="select-none px-2">ภาษาลู</label>
+                        <div class="w-8 h-4 button-border-red flex justify-center items-center" style="border-radius: 0.2rem;">
+                            <p class="text-red-400">ใหม่</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 w-full space-y-6">
+                    <div class="flex items-center px-4">
+                        <img class="h-6" src="https://cdn.discordapp.com/attachments/870731779462561852/872496928556994630/unknown.png" alt="">
+                        <p>ระดับการด่า (ระดับการใช้คำ)</p>
+                    </div>
+                    <div class="w-10/12 h-16 radiobox ml-3 p-2">
+                        <div class="justify-between flex items-center h-6 px-2">
+                            <div>
+                                <p class="text-base">สุภาพ</p>
+                            </div>
+                            <div>
+                                <label class="container px-2">
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <p class="text-xs px-2 mt-2">เป็นการด่าแบบผู้ดีใช้คำเหมาะสมบ้าง น่ารักบ้าง</p>
+                    </div>
+                    <div class="w-10/12 h-16 radiobox ml-3 p-2">
+                        <div class="justify-between flex items-center h-6 px-2">
+                            <div>
+                                <p class="text-base">ปานกลาง</p>
+                            </div>
+                            <div>
+                                <label class="container px-2">
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <p class="text-xs px-2 mt-2">เป็นการด่าแบบผู้ดี ผสมหยาบทำให้ผู้ฟังและผู้อ่านเกิดการกระตุ้นอารมณ์</p>
+                    </div>
+                    <div class="w-10/12 h-16 radiobox ml-3 p-2">
+                        <div class="justify-between flex items-center h-6 px-2">
+                            <div class="flex">
+                                <p class="text-base">แรงมาก</p>
+                                <div class=""></div>
+                            </div>
+                            <div>
+                                <label class="container px-2">
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <p class="text-xs px-2 mt-2">หยาบแบบแรงไม่ไหวใครอ่านใครฟังก็ต้องจุก</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/2">2</div> 
+        </div>
+    </div>
+    <script>
+        document.getElementById('button').onclick = function () {
+            document.getElementById("sidebar").classList.remove("hidden")
+        }
+        document.getElementById('buttonx').onclick = function () {
+            document.getElementById("sidebar").classList.add("hidden")
+        }
+    </script>
+</body>
+
+</html>
