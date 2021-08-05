@@ -10,6 +10,7 @@
     <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -22,24 +23,31 @@
             height: 100vh;
             width: 100%;
         }
-
         .page {
             height: 100vh;
+        }
+
+        .nav-text:hover {
+            transition: all .5s;
+            color: black;
         }
 
         .navbar {
             border-bottom: 1.5px solid rgb(225, 220, 220);
             height: 4.5rem;
         }
-        .api-coming-soon:hover{
+
+        .api-coming-soon:hover {
             background-color: #DC2629;
             color: white;
         }
-        .merge-left{
+
+        .merge-left {
             width: 30rem;
             height: 35.5rem;
         }
-        .human-icon{
+
+        .human-icon {
             width: 22px;
             height: 22px;
             background-image: url(../public/img/human.png);
@@ -55,182 +63,210 @@
             background-size: contain;
         }
 
-        .merge-right{
+        .merge-right {
             width: 35rem;
             height: 35.5rem;
         }
 
         /* img */
-        .logo-preaw{
+        .logo-preaw {
             background-image: url(../public/img/e-preawlogo-final.png);
             width: 3rem;
             height: 3rem;
             background-size: contain;
         }
-        .logo-sunlight{
+
+        .logo-sunlight {
             background-image: url(../public/img/sun.png);
             width: 1.5rem;
             height: 1.5rem;
             background-size: contain;
         }
-        .buttoncopy{
+
+        .buttoncopy {
             background-color: #DC2629;
             border-radius: 4px;
             width: 85%;
         }
-        .logoduplicate{
+
+        .logoduplicate {
             background-image: url(../public/img/duplicate.svg);
         }
-        .vector{
+
+        .vector {
             background-image: url(../public/img/vector.png);
         }
-        .buttonvolume{
+
+        .buttonvolume {
             background-color: #DC2629;
             border-radius: 4px;
             width: 15%;
         }
-
+        
         input[type="radio"]:after {
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        content: '';
-        background-color: #F4CECE;
-        display: inline-block;
-        visibility: visible;
-    }
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            content: '';
+            background-color: #F4CECE;
+            display: inline-block;
+            visibility: visible;
+        }
 
         input[type="radio"]:checked:after {
-        width: 100%;
-        height: 100%;
-        border: 6px solid#DC2629;
-        border-radius: 15px;
-        content: '';
-        background-color: white;
-        display: inline-block;
-        visibility: visible;
-    }
-    .height-11{
-        height: 91%;
-    }
-    .w-c{
-        width: 100%
-    }
-    .button-border-red{
-        border: 2px solid red;
-        border-radius: 0.1rem;
-    }
+            width: 100%;
+            height: 100%;
+            border: 6px solid#DC2629;
+            border-radius: 15px;
+            content: '';
+            background-color: white;
+            display: inline-block;
+            visibility: visible;
+        }
+
+        .height-11 {
+            height: 91%;
+        }
+
+        .w-c {
+            width: 100%
+        }
+
+        .button-border-red {
+            border: 2px solid red;
+            border-radius: 0.1rem;
+        }
     </style>
 </head>
 
 <body>
     <div class="page">
         <!-- navbar -->
-            <div class="navbar w-full flex sm:justify-center items-center">
-                    <div class="nav-all w-8/12 flex justify-between items-center">
-                        <div class="logo-box w-full flex items-center cursor-pointer select-none ml-5 sm:ml-0">
-                            <div class="logo-preaw bg-no-repeat "></div>
-                            <p class="ml-2 text-xl ">อีเปรี้ยว</p>
-                        </div>
-                        <div class="hidden sm:flex items-center w-3/4 space-x-8 ml-16">
-                            <p class="text-gray-400 w-20 cursor-pointer select-none">ช่วยเหลือ</p>
-                            <p class="text-gray-400 w-28 cursor-pointer select-none">ซื้อกาแฟให้ฉัน</p>
-                            <p class="api-coming-soon border-2 px-3 py-2 rounded border-red-500 text-red-500 w-40 cursor-pointer select-none">API Coming Soon</p>
-                            <div class="logo-sunlight bg-no-repeat cursor-pointer select-none"></div>
-                        </div>
-                        <div class="button-border-red w-9 absolute right-4 flex sm:hidden">
-                            <img class="h-8" src="https://cdn.discordapp.com/attachments/870731779462561852/872489091520921640/unknown.png" alt="">
-                        </div>
-                    </div>
-            </div>
-        <!-- body -->
-        <div class="body-container w-full h-full"">
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div class=" flex mr-0 sm:mr-10">
-                    <div class="flex w-full mt-8 sm:mt-16 justify-end">
-                        <div class="merge-left">
-                            <div class="flex items-center justify-center sm:justify-start">
-                                <div class="human-icon"></div>
-                                <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold">
-                                    ใส่ชื่อของคนที่จะด่า</label>
-                            </div>
-                            <input class="appearance-none block w-full shadow-md rounded py-3 px-4 mb-6 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="ชื่อ">
-        
-                            <div class="flex items-center justify-center sm:justify-start"">
-                                <div class="pen-icon"></div>
-                                <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold">
-                                    ใส่ความยาวของคำด่า (คำ)</label>
-                            </div>
-                            <input class="appearance-none block w-full shadow-md rounded py-3 px-4 mb-6 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="ความยาว">
-        
-                            <div class="flex items-cente justify-center sm:justify-start"">
-                                <div class="pen-icon"></div>
-                                <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold">
-                                    ภาษาที่ต้องการใช้ในการด่า</label>
-                            </div>
-                            <div class="flex items-center mt-4 justify-center sm:justify-start"">
-                                <input type="checkbox" id="checkbox-large-example" class="h-6 w-6 text-gray-700 border rounded mr-2">
-                                <label for="checkbox-large-example" class="mr-6 text-sm">ภาษาวัยรุ่น</label>
-                                <input type="checkbox" id="checkbox-large-example" class="h-6 w-6 text-gray-700 border rounded mr-2">
-                                <label for="checkbox-large-example" class="mr-6 text-sm">ภาษากะเทย</label>
-                                <input type="checkbox" id="checkbox-large-example" class="h-6 w-6 text-gray-700 border rounded mr-2">
-                                <label for="checkbox-large-example" class="mr-6 text-sm">ภาษาลู</label>
-                            </div>
-        
-                            <div class="flex items-center mt-6 justify-center sm:justify-start"">
-                                <div class="pen-icon"></div>
-                                <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold">
-                                    ระดับการด่า (ระดับการใช้ค่า)</label>
-                            </div>
-                            <div class="text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none">
-                                <div class="flex items-center w-full justify-between select-none">
-                                    <p class="text-m font-semibold ml-4">สุภาพ</p>
-                                    <input type="radio" class="mr-4 w-6 h-6" name="select-input" value=""/>
-                                </div>
-                                <span class="ml-4 text-gray-400 text-sm">เป็นการด่าแบบผู้ดีใช้คำเหมาะสมบ้าง น่ารักบ้าง</span>
-                            </div>
-        
-                            <div class="text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none">
-                                <div class="flex items-center w-full justify-between">
-                                    <p class="text-m font-semibold ml-4">ปานกลาง</p>
-                                    <input type="radio" class="mr-4 w-6 h-6" name="select-input" value=""/>
-                                </div>
-                                <span class="ml-4 text-gray-400 text-sm">เป็นการด่าแบบผู้ดี ผสมหยาบทำให้ผู้ฟังและผู้อ่านเกิดการกระตุ้นอารมณ์</span>
-                            </div>
-        
-                            <div class="text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none">
-                                <div class="flex items-center w-full justify-between">
-                                    <div class="flex">
-                                        <p class="text-m font-semibold ml-4">แรงมาก</p>
-                                        <div class="w-20 h-6 border rounded-xl bg-blue-200 ml-2 text-xs flex items-center justify-center font-medium text-white" style="background-color: #DC2629;">กำลังมาแรง !</div>
-                                    </div>
-                                    <input type="radio" class="mr-4 w-6 h-6" name="select-input" value=""/>
-                                </div>
-                                <span class="ml-4 text-gray-400 text-sm">หยาบแบบแรงไม่ไหวใครอ่านใครฟังก็ต้องจุก</span>
-                            </div>
-                            <div class="btn-create-word w-full h-10 rounded-md mt-4 flex justify-center items-center text-white font-light" style="background-color: #DC2629;">
-                            สร้างคำด่า</div>
-                        </div>
-                    </div>
+        <div class="navbar w-full flex sm:justify-center items-center">
+            <div class="nav-all w-8/12 flex justify-between items-center">
+                <div class="logo-box w-full flex items-center cursor-pointer select-none ml-5 sm:ml-0">
+                    <div class="logo-preaw bg-no-repeat "></div>
+                    <p class="ml-2 text-xl ">อีเปรี้ยว</p>
                 </div>
-                <div class="flex items-center justify-start">
-                    <div class="merge-right mt-16">
-                        <div class="w-c height-11 shadow-2xl"></div>
-                        <div class="w-full h-12 sm:h-20 flex items-center py-1">
-                            <div class="h-12 sm:h-20 buttoncopy flex items-center justify-center mt-3">
-                                <div class="logoduplicate bg-no-repeat w-8 h-8 bg-contain"></div>
-                            </div>
-                            <div class="buttonvolume h-12 sm:h-20 mt-3 ml-2 flex items-center justify-center">
-                                <div class="vector w-9 h-9 bg-contain bg-no-repeat"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hidden sm:flex items-center w-3/4 space-x-8 ml-16">
+                    <p class="nav-text text-gray-400 w-20 cursor-pointer select-none">ช่วยเหลือ</p>
+                    <p class="nav-text text-gray-400 w-28 cursor-pointer select-none">ซื้อกาแฟให้ฉัน</p>
+                    <p class="api-coming-soon border-2 px-3 py-2 rounded border-red-500 text-red-500 w-40 cursor-pointer select-none">API Coming Soon</p>
+                    <div class="logo-sunlight bg-no-repeat cursor-pointer select-none"></div>
+                </div>
+                <div class="button-border-red w-9 absolute right-4 flex sm:hidden">
+                    <img class="h-8"
+                        src="https://cdn.discordapp.com/attachments/870731779462561852/872489091520921640/unknown.png"
+                        alt="">
                 </div>
             </div>
         </div>
+        <!-- body -->
+        <div class="body-container w-full h-full"">
+            <div class=" grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div class=" flex mr-0 sm:mr-10">
+                <div class="flex w-full mt-8 sm:mt-16 justify-end">
+                    <div class="merge-left">
+                        <div class="flex items-center justify-center sm:justify-start">
+                            <div class="human-icon"></div>
+                            <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold">
+                                ใส่ชื่อของคนที่จะด่า</label>
+                        </div>
+                        <input class="appearance-none block w-full border-none shadow-md rounded py-3 px-4 mb-6 leading-tight focus:outline-none focus:bg-white"
+                            type="text" placeholder="ชื่อ">
 
+                        <div class="flex items-center justify-center sm:justify-start"">
+                                <div class=" pen-icon"></div>
+                        <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold">
+                            ใส่ความยาวของคำด่า (คำ)</label>
+                    </div>
+                    <input class="appearance-none block w-full shadow-md border-none rounded py-3 px-4 mb-6 leading-tight focus:outline-none focus:bg-white"
+                    type="text" placeholder="ความยาว">
+
+                    <div class="flex items-cente justify-center sm:justify-start"">
+                                <div class=" pen-icon"></div>
+                    <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold">
+                        ภาษาที่ต้องการใช้ในการด่า</label>
+                </div>
+                <div class="flex items-center mt-4 justify-center sm:justify-start"">
+                    <input type="checkbox" class="form-checkbox rounded-md focus:ring-0 h-6 w-6 mr-2 text-red-500 border-gray-300">
+                    <label for="checkbox-large-example" class="mr-6 text-sm font-medium">ภาษาวัยรุ่น</label>
+                    <input type="checkbox" class="form-checkbox rounded-md focus:ring-0 h-6 w-6 rounded mr-2 text-red-500 border-gray-300">
+                    <label for="checkbox-large-example" class="mr-6 text-sm font-medium">ภาษากะเทย</label>
+                    <input type="checkbox" class="form-checkbox rounded-md focus:ring-0 h-6 w-6 rounded mr-2 text-red-500 border-gray-300">
+                    <label for="checkbox-large-example" class="text-sm font-medium">ภาษาลู</label>
+                    <p class="w-12 h-6 flex items-center justify-center rounded-xl text-sm font-semibold bg-white text-red-500 border border-red-500 ml-2 select-none">ใหม่ !</p>
+                </div>
+
+                <div class="flex items-center mt-6 justify-center sm:justify-start"">
+                <div class=" pen-icon"></div>
+                <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold">
+                    ระดับการด่า (ระดับการใช้ค่า)</label>
+            </div>
+            <div class="select_radio text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none">
+                <div class="flex items-center w-full justify-between select-none ">
+                    <p class="text-m font-semibold ml-4">สุภาพ</p>
+                    <input type="radio" class="mr-4 w-6 h-6 focus:ring-0 border-none" name="select-input" onclick="btn_radio(0);" value=""/>
+                </div>
+                <span class="ml-4 text-gray-400 text-sm">เป็นการด่าแบบผู้ดีใช้คำเหมาะสมบ้าง น่ารักบ้าง</span>
+            </div>
+
+            <div class="select_radio text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none">
+                <div class="flex items-center w-full justify-between">
+                    <p class="text-m font-semibold ml-4">ปานกลาง</p>
+                    <input type="radio" class="mr-4 w-6 h-6 focus:ring-0 border-none" name="select-input" onclick="btn_radio(1);" value="" />
+                </div>
+                <span class="ml-4 text-gray-400 text-sm">เป็นการด่าแบบผู้ดี
+                    ผสมหยาบทำให้ผู้ฟังและผู้อ่านเกิดการกระตุ้นอารมณ์</span>
+            </div>
+
+            <div class="select_radio text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none">
+                <div class="flex items-center w-full justify-between">
+                    <div class="flex">
+                        <p class="text-m font-semibold ml-4">แรงมาก</p>
+                        <div class="w-20 h-6 border rounded-xl bg-blue-200 ml-2 text-xs flex items-center justify-center font-medium text-white"
+                            style="background-color: #DC2629;">กำลังมาแรง !</div>
+                    </div>
+                    <input type="radio" class="mr-4 w-6 h-6 focus:ring-0 border-none" name="select-input" onclick="btn_radio(2);" value="" />
+                </div>
+                <span class="ml-4 text-gray-400 text-sm">หยาบแบบแรงไม่ไหวใครอ่านใครฟังก็ต้องจุก</span>
+            </div>
+            <div class="btn-create-word w-full h-10 rounded-md mt-4 flex justify-center items-center text-white font-light cursor-pointer"
+                style="background-color: #DC2629;">
+                สร้างคำด่า</div>
+        </div>
+    </div>
+    </div>
+    <div class="flex items-center justify-start">
+        <div class="merge-right mt-16">
+            <div class="w-c height-11 shadow-2xl"></div>
+            <div class="w-full h-12 sm:h-20 flex items-center py-1">
+                <div class="h-12 sm:h-20 buttoncopy flex items-center justify-center mt-3 cursor-pointer">
+                    <div class="logoduplicate bg-no-repeat w-8 h-8 bg-contain"></div>
+                </div>
+                <div class="buttonvolume h-12 sm:h-20 mt-3 ml-2 flex items-center justify-center cursor-pointer">
+                    <div class="vector w-9 h-9 bg-contain bg-no-repeat"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     </div>
 
+    </div>
+    <script>
+        var radio_list = document.querySelectorAll(".select_radio");
+        function btn_radio(event){
+            for (let i=0; i<3; i++){
+                if (i == event){
+                    radio_list[i].classList.add("border-red-500");
+                }
+                else{
+                    radio_list[i].classList.remove("border-red-500");
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
