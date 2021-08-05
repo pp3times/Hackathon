@@ -203,31 +203,31 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold">
                     ระดับการด่า (ระดับการใช้ค่า)</label>
             </div>
-            <div class="select_radio text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none">
+            <div class="select_radio text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none cursor-pointer" onclick="btn_radio(0);">
                 <div class="flex items-center w-full justify-between select-none ">
                     <p class="text-m font-semibold ml-4">สุภาพ</p>
-                    <input type="radio" class="mr-4 w-6 h-6 focus:ring-0 border-none" name="select-input" onclick="btn_radio(0);" value=""/>
+                    <input type="radio" class="mr-4 w-6 h-6 focus:ring-0 border-none" name="select-input" id="input_radio" value=""/>
                 </div>
                 <span class="ml-4 text-gray-400 text-sm">เป็นการด่าแบบผู้ดีใช้คำเหมาะสมบ้าง น่ารักบ้าง</span>
             </div>
 
-            <div class="select_radio text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none">
+            <div class="select_radio text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none cursor-pointer" onclick="btn_radio(1);">
                 <div class="flex items-center w-full justify-between">
                     <p class="text-m font-semibold ml-4">ปานกลาง</p>
-                    <input type="radio" class="mr-4 w-6 h-6 focus:ring-0 border-none" name="select-input" onclick="btn_radio(1);" value="" />
+                    <input type="radio" class="mr-4 w-6 h-6 focus:ring-0 border-none" name="select-input" id="input_radio" value="" />
                 </div>
                 <span class="ml-4 text-gray-400 text-sm">เป็นการด่าแบบผู้ดี
                     ผสมหยาบทำให้ผู้ฟังและผู้อ่านเกิดการกระตุ้นอารมณ์</span>
             </div>
 
-            <div class="select_radio text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none">
+            <div class="select_radio text-box-radio w-full h-20 border rounded-md flex flex-col justify-center mt-2 select-none cursor-pointer" onclick="btn_radio(2);">
                 <div class="flex items-center w-full justify-between">
                     <div class="flex">
                         <p class="text-m font-semibold ml-4">แรงมาก</p>
-                        <div class="w-20 h-6 border rounded-xl bg-blue-200 ml-2 text-xs flex items-center justify-center font-medium text-white"
+                        <div class="w-20 h-6 border rounded-xl bg-blue-200 ml-2 text-xs flex items-center justify-center font-medium text-white cursor-pointer"
                             style="background-color: #DC2629;">กำลังมาแรง !</div>
                     </div>
-                    <input type="radio" class="mr-4 w-6 h-6 focus:ring-0 border-none" name="select-input" onclick="btn_radio(2);" value="" />
+                    <input type="radio" class="mr-4 w-6 h-6 focus:ring-0 border-none" name="select-input" id="input_radio" value="" />
                 </div>
                 <span class="ml-4 text-gray-400 text-sm">หยาบแบบแรงไม่ไหวใครอ่านใครฟังก็ต้องจุก</span>
             </div>
@@ -255,10 +255,12 @@
 
     </div>
     <script>
+        var input_radio = document.querySelectorAll("#input_radio");
         var radio_list = document.querySelectorAll(".select_radio");
         function btn_radio(event){
             for (let i=0; i<3; i++){
                 if (i == event){
+                    input_radio[i].checked = true;
                     radio_list[i].classList.add("border-red-500");
                 }
                 else{
